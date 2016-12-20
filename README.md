@@ -1,2 +1,3 @@
 # tinchoz49.github.io
-Personal website
+
+[Resume](/resume.pdf)
