@@ -1,0 +1,14 @@
+---
+import { Icon as IconBase } from 'astro-icon/components'
+
+interface Props {
+  name: string
+  size: number
+  color?: string
+  class?: string
+}
+
+const { name, size, color = 'currentColor', ...props } = Astro.props
+---
+
+<IconBase name={name} width={size} height={size} style={{ color }} {...props} />

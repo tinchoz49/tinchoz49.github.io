@@ -1,0 +1,9 @@
+{
+  "languages": {
+    "Astro": {
+      "language_servers": ["astro-language-server", "eslint"],
+      "tab_size": 2,
+      "hard_tabs": false
+    }
+  }
+}

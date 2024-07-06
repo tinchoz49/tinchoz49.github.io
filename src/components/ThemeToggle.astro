@@ -1,0 +1,56 @@
+---
+import Icon from './Icon.astro'
+---
+
+<button
+  aria-label="Theme toggle"
+  class="fixed bottom-3 left-3 z-10 inline-flex size-10 items-center justify-center rounded-lg bg-gray-100 text-gray-400 shadow-xl transition focus:ring-primary-500 dark:bg-gray-600 dark:text-gray-200"
+  id="theme-toggle"
+>
+  <Icon size={20} name="ri:moon-fill" class="block dark:hidden" />
+  <Icon size={20} name="ri:sun-line" class="hidden dark:block" />
+</button>
+
+<script is:inline>
+  const themeToggle = document.getElementById('theme-toggle')
+
+  const toggleTheme = () => {
+    const theme = localStorage.getItem('theme') ?? 'light'
+    const newTheme = theme === 'light' ? 'dark' : 'light'
+    const themeMeta = document.getElementsByName('theme-color')
+
+    if (themeMeta[0]) {
+      themeMeta[0].content = newTheme === 'dark' ? '#1a202c' : '#ffffff'
+    }
+
+    document.documentElement.classList[newTheme === 'dark' ? 'add' : 'remove'](
+      'dark',
+    )
+
+    localStorage.setItem('theme', newTheme)
+  }
+
+  themeToggle.addEventListener('click', toggleTheme)
+
+  // initial theme setup
+  const theme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
+  })()
+
+  const themeMeta = document.getElementsByName('theme-color')
+
+  if (themeMeta[0]) {
+    themeMeta[0].content = theme === 'dark' ? '#1a202c' : '#ffffff'
+  }
+
+  if (theme === 'light') {
+    document.documentElement.classList.remove('dark')
+  } else {
+    document.documentElement.classList.add('dark')
+  }
+</script>

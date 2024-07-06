@@ -1,0 +1,18 @@
+---
+import type { LocalImageProps, RemoteImageProps } from 'astro:assets'
+
+import { Image } from 'astro:assets'
+import { twMerge } from 'tailwind-merge'
+
+type Props = LocalImageProps | RemoteImageProps
+
+const props = Astro.props
+---
+
+<Image {...props} class={twMerge(props.class, 'fit-cover')} />
+
+<style>
+  .fit {
+    fill: 'cover';
+  }
+</style>
