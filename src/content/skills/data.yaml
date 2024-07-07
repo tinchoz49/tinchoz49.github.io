@@ -1,0 +1,42 @@
+config:
+  title: Skills
+  slug: skills
+  icon: 'fa6-solid:bars-progress'
+  visible: true
+skillSets:
+  - title: I already know
+    skills:
+      - type: apolloGraphql
+        level: 3
+      - type: astro
+        level: 5
+      - type: eslint
+        level: 5
+      - type: jest
+        level: 5
+      - type: mongoDb
+        level: 2
+      - type: nextJs
+        level: 3
+      - type: pnpm
+        level: 3
+      - type: postgreSql
+        level: 5
+      - type: prettier
+        level: 5
+      - type: react
+        level: 5
+      - type: reactQuery
+        level: 3
+      - type: tailwindCss
+        level: 3
+      - type: typescript
+        level: 4
+  - title: I want to learn
+    skills: []
+  - title: I speak
+    skills:
+      - icon: 'circle-flags:es-variant'
+        name: Spanish - native
+      - icon: 'circle-flags:us'
+        name: English - B1

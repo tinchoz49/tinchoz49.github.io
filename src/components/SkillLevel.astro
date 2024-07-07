@@ -1,0 +1,21 @@
+---
+import type { SkillLevel } from '@/types/content.d.ts'
+
+import SkillLevelTile from './SkillLevelTile.astro'
+
+export interface Props {
+  skillLevel: SkillLevel
+}
+
+const { skillLevel } = Astro.props
+
+const levels = [1, 2, 3, 4, 5] as const
+---
+
+<div class="flex gap-1">
+  {
+    levels.map((tileLevel) => (
+      <SkillLevelTile tileLevel={tileLevel} skillLevel={skillLevel} />
+    ))
+  }
+</div>

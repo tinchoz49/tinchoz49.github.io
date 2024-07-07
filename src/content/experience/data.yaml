@@ -1,0 +1,53 @@
+config:
+  title: Work experience
+  slug: experience
+  icon: 'fa6-solid:suitcase'
+  visible: true
+jobs:
+  - role: Senior front-end developer
+    company: Google
+    image: null
+    dates:
+      - 2020-02-01T00:00:00.000Z
+      - null
+    description: |2-
+      - In tristique vulputate augue vel egestas.
+      - Quisque ac imperdiet tortor, at lacinia ex.
+      - Duis vel ex hendrerit, commodo odio sed, aliquam enim.
+      - Ut arcu nulla, tincidunt eget arcu eget, molestie vulputate nisi.
+      - Nunc malesuada leo et est iaculis facilisis.
+      - Fusce eu urna ut magna malesuada fringilla.
+    tagsList:
+      title: Technologies
+      tags: []
+    links: []
+  - role: React.js developer
+    company: Facebook
+    image: null
+    dates:
+      - 2019-04-01T00:00:00.000Z
+      - 2020-02-01T00:00:00.000Z
+    description: |2-
+      - Aenean eget ultricies felis. Pellentesque dictum massa ut tellus eleifend, sed posuere massa mattis.
+      - Ut posuere massa lacus, eleifend molestie tortor auctor vel.
+      - Sed sed sollicitudin eros, id ultricies mi. Aliquam sodales elit vel ante tempor, non vehicula nibh facilisis.
+      - Cras feugiat ultricies maximus. Aliquam tristique ex odio, ac semper urna accumsan a.
+    tagsList:
+      title: Technologies
+      tags: []
+    links: []
+  - role: Junior front-end developer
+    company: GitLab
+    image: null
+    dates:
+      - 2016-09-01T00:00:00.000Z
+      - 2019-04-01T00:00:00.000Z
+    description: |2-
+      Nulla volutpat justo ante, rhoncus posuere massa egestas in:
+      - Quisque pellentesque, dolor nec sollicitudin iaculis, sem velit consequat ligula, eget tempus ligula leo et est.
+      - Maecenas ut elit sit amet nibh maximus condimentum in nec lorem. Pellentesque tincidunt odio vel leo suscipit, in interdum mi gravida.
+        Donec non vulputate augue \U0001F913
+    tagsList:
+      title: Technologies
+      tags: []
+    links: []

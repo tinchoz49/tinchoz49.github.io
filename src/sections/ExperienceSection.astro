@@ -1,0 +1,18 @@
+---
+import type { ExperienceSection } from '@/types/content.d.ts'
+
+import DividedList from '@/components/DividedList.astro'
+import Divider from '@/components/Divider.astro'
+import Job from '@/components/Job.astro'
+import SectionCard from '@/components/SectionCard.astro'
+
+export interface Props extends ExperienceSection {}
+
+const { config, jobs } = Astro.props
+---
+
+<SectionCard {...config}>
+  <DividedList>
+    {jobs.flatMap((job) => [<Job {...job} />, <Divider />])}
+  </DividedList>
+</SectionCard>
