@@ -1,6 +1,7 @@
 import type { ImageMetadata } from 'astro'
-import type { z } from 'astro:content'
 import type { CircleFlags, Fa6Brands, Fa6Solid, Ri, SimpleIcons } from 'iconify-icon-names'
+
+import type { z } from 'astro:content'
 
 import type {
   DateRangeSchema,

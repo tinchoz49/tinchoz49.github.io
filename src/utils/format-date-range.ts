@@ -1,6 +1,7 @@
 import type { DateRange } from '@/types/shared'
 
 import { getEntry } from 'astro:content'
+
 import { format } from 'date-fns'
 
 const { data: settings } = await getEntry('settings', 'data')

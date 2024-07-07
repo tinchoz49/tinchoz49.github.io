@@ -1,12 +1,12 @@
 ---
-import ThemeToggle from '@/components/ThemeToggle.astro'
-import Layout from '@/layouts/Layout.astro'
 import { getEntry } from 'astro:content'
 
-import ExperienceSection from '../sections/ExperienceSection.astro'
-import MainSection from '../sections/MainSection.astro'
-import ProjectsSection from '../sections/ProjectsSection.astro'
-import SkillsSection from '../sections/SkillsSection.astro'
+import ThemeToggle from '@/components/ThemeToggle.astro'
+import Layout from '@/layouts/Layout.astro'
+import ExperienceSection from '@/sections/ExperienceSection.astro'
+import MainSection from '@/sections/MainSection.astro'
+import ProjectsSection from '@/sections/ProjectsSection.astro'
+import SkillsSection from '@/sections/SkillsSection.astro'
 
 const mainEntry = await getEntry('main', 'data')
 const skillsEntry = await getEntry('skills', 'data')

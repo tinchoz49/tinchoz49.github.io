@@ -16,12 +16,6 @@ const config = standard(
   a11yConfig,
   ...tailwind.configs['flat/recommended'],
   {
-    rules: {
-      'tailwindcss/no-custom-classname': 'off',
-      'ts/explicit-function-return-type': 'off',
-    },
-  },
-  {
     ignores: [
       'public/',
     ],
@@ -42,11 +36,43 @@ const config = standard(
     },
   },
   {
-    files: ['**/*.ts'],
     languageOptions: {
       globals: {
         NodeJS: true,
       },
+    },
+    rules: {
+      'perfectionist/sort-imports': [
+        'error',
+        {
+          'custom-groups': {
+            type: {
+              'astro': 'astro:*',
+              'node-test': 'node:test',
+            },
+            value: {
+              'astro': 'astro:*',
+              'node-test': 'node:test',
+            },
+          },
+          'groups': [
+            'type',
+            'internal-type',
+            ['node-test', 'builtin'],
+            'astro',
+            'external',
+            'internal',
+            ['parent-type', 'sibling-type', 'index-type'],
+            ['parent', 'sibling', 'index'],
+            'object',
+            'unknown',
+          ],
+          'order': 'asc',
+          'type': 'natural',
+        },
+      ],
+      'tailwindcss/no-custom-classname': 'off',
+      'ts/explicit-function-return-type': 'off',
     },
   }
 )
