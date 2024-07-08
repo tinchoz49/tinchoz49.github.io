@@ -4,7 +4,7 @@ config:
   icon: 'fa6-solid:bars-progress'
   visible: true
 skillSets:
-  - title: I already know
+  - title: I have experience with
     skills:
       - type: apolloGraphql
         level: 3

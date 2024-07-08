@@ -1,13 +1,17 @@
 ---
+import { getSettings } from '../utils/content'
+
 interface Props {
   title: string
 }
 
 const { title }: Props = Astro.props
+
+const settings = await getSettings()
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={settings.i18n.locale.code} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />

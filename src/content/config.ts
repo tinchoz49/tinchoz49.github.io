@@ -1,7 +1,7 @@
 import { defineCollection, z } from 'astro:content'
 
-import * as links from '../utils/links.ts'
-import * as skills from '../utils/skills.ts'
+import * as links from '../utils/links'
+import * as skills from '../utils/skills'
 
 const lookupTypes = (types: object) => (val) => {
   const { type, ...props } = val as { type?: string }
@@ -79,7 +79,7 @@ export const MetaConfigSchema = z.object({
 
 export const I18nConfigSchema = z.object({
   locale: z.object({
-    filename: z.string(),
+    code: z.string(),
     key: z.string(),
   }),
   dateFormat: z.string(),
@@ -164,6 +164,70 @@ export const collections = {
         }),
         links: z.array(LinkButtonSchema),
       })),
+    }),
+  }),
+  education: defineCollection({
+    type: 'data',
+    schema: ({ image }) => SectionSchema.extend({
+      diplomas: z.array(z.object({
+        title: z.string(),
+        institution: z.string(),
+        image: image().optional().nullable(),
+        dates: DateRangeSchema,
+        description: z.string(),
+        links: z.array(LinkButtonSchema),
+      })),
+    }),
+  }),
+  testimonials: defineCollection({
+    type: 'data',
+    schema: ({ image }) => SectionSchema.extend({
+      testimonials: z.array(z.object({
+        image: image(),
+        author: z.string(),
+        relation: z.string(),
+        content: z.string(),
+        links: z.array(LinkButtonSchema),
+      })),
+    }),
+  }),
+  favorites: defineCollection({
+    type: 'data',
+    schema: ({ image }) => SectionSchema.extend({
+      books: z.object({
+        title: z.string(),
+        data: z.array(z.object({
+          title: z.string(),
+          image: image(),
+          author: z.string(),
+          url: z.string(),
+        })),
+      }).optional(),
+      people: z.object({
+        title: z.string(),
+        data: z.array(z.object({
+          name: z.string(),
+          image: image(),
+          url: z.string(),
+        })),
+      }).optional(),
+      videos: z.object({
+        title: z.string(),
+        data: z.array(z.object({
+          title: z.string(),
+          image: image(),
+          url: z.string(),
+        })),
+      }).optional(),
+      medias: z.object({
+        title: z.string(),
+        data: z.array(z.object({
+          title: z.string(),
+          type: z.string(),
+          image: image(),
+          url: z.string(),
+        })),
+      }).optional(),
     }),
   }),
 }

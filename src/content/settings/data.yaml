@@ -1,6 +1,6 @@
 i18n:
   locale:
-    filename: en-US
+    code: en-US
     key: enUS
   dateFormat: MMMM yyyy
   translations:

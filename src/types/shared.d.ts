@@ -10,7 +10,7 @@ import type {
   LinkButtonSchema,
   SectionConfigSchema,
   TagSchema,
-} from '../content/config.ts'
+} from '../content/config'
 
 export type SectionConfig = z.infer<typeof SectionConfigSchema>
 export type LabelledValue = z.infer<typeof LabelledValueSchema>
