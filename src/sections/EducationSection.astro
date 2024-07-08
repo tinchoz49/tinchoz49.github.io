@@ -1,0 +1,15 @@
+---
+import type { EducationSection } from '@/types/content'
+
+import Diploma from '@/components/Diploma.astro'
+import Divider from '@/components/Divider.astro'
+import SectionCard from '@/components/SectionCard.astro'
+
+export interface Props extends EducationSection {}
+
+const { config, diplomas } = Astro.props
+---
+
+<SectionCard {...config}>
+  {diplomas.flatMap((diploma) => [<Diploma {...diploma} />, <Divider />])}
+</SectionCard>

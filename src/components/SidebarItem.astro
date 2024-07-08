@@ -1,0 +1,29 @@
+---
+import type { SectionConfig } from '@/types/shared'
+
+import Icon from './Icon.astro'
+
+export interface Props extends SectionConfig {}
+
+const { icon, slug, title } = Astro.props
+---
+
+<a
+  href={`#${slug}`}
+  class="inline-flex size-10 items-center justify-center rounded-lg transition"
+  aria-label={`${title} section`}
+  data-tooltip={title}
+  data-tooltip-placement="left"
+>
+  <Icon name={icon} size={20} />
+</a>
+
+<style>
+  [aria-current='page'] {
+    @apply bg-primary-600 text-white;
+  }
+
+  :not([aria-current='page']) {
+    @apply text-gray-400 hover:bg-primary-600 hover:text-white dark:text-gray-200;
+  }
+</style>

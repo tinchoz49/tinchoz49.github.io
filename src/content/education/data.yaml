@@ -1,0 +1,22 @@
+config:
+  title: Education
+  slug: education
+  icon: 'fa6-solid:graduation-cap'
+  visible: true
+diplomas:
+  - title: Information Technology
+    institution: Wrocław University of Science and Technology
+    # image: null
+    dates:
+      - 2014-10-01T03:00:00.000Z
+      - 2016-07-01T03:00:00.000Z
+    description: Master degree. Specialization in software development.
+    links: []
+  - title: Information Technology
+    institution: Wrocław University of Science and Technology
+    # image: ''
+    dates:
+      - 2011-10-01T03:00:00.000Z
+      - 2014-07-01T03:00:00.000Z
+    description: Bachelor's degree. Specialization in application development.
+    links: []

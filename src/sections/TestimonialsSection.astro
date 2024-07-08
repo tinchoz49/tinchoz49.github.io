@@ -1,0 +1,23 @@
+---
+import type { TestimonialsSection } from '@/types/content'
+
+import DividedList from '@/components/DividedList.astro'
+import Divider from '@/components/Divider.astro'
+import SectionCard from '@/components/SectionCard.astro'
+import Testimonial from '@/components/Testimonial.astro'
+
+export interface Props extends TestimonialsSection {}
+
+const { testimonials, config } = Astro.props
+---
+
+<SectionCard {...config}>
+  <DividedList>
+    {
+      testimonials.flatMap((testimonial) => [
+        <Testimonial {...testimonial} />,
+        <Divider />,
+      ])
+    }
+  </DividedList>
+</SectionCard>
