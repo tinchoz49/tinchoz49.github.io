@@ -1,4 +1,6 @@
 ---
+import { twJoin } from 'tailwind-merge'
+
 import BaseDescription from './BaseDescription.astro'
 import { variantToClassName } from './Typography.astro'
 
@@ -12,5 +14,5 @@ const { content, class: className } = Astro.props
 
 <BaseDescription
   content={content}
-  classList={[variantToClassName.paragraph, className]}
+  class={twJoin(variantToClassName.paragraph, className)}
 />

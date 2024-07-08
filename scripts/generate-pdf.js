@@ -23,7 +23,7 @@ const retry = async ({ promise, retries, retryTime }) => {
 }
 
 const main = async () => {
-  const child = exec('npm run dev')
+  const child = exec('pnpm dev')
 
   const browser = await puppeteer.launch({ headless: true })
 
@@ -32,13 +32,13 @@ const main = async () => {
   await page.setViewport({ width: 794, height: 1122, deviceScaleFactor: 2 })
 
   await retry({
-    promise: () => goTo(page, 'http://localhost:3000/pdf'),
+    promise: () => goTo(page, 'http://localhost:4321/pdf'),
     retries: 5,
     retryTime: 1000,
   })
 
   await pdfPage(page, {
-    path: path.join(__dirname, '..', 'public', 'cv.pdf'),
+    path: path.join(import.meta.dirname, '..', 'public', 'cv.pdf'),
     format: 'A4',
     printBackground: true,
     margin: { top: '10mm', right: '10mm', bottom: '10mm', left: '10mm' },

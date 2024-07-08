@@ -1,9 +1,10 @@
 ---
 import { marked } from 'marked'
+import { twJoin } from 'tailwind-merge'
 
 interface Props {
   content: string
-  classList: Array<string | undefined>
+  class?: string
 }
 
 const minIndent = (str: string) => {
@@ -29,13 +30,10 @@ const parseMarkdown = (str: string) =>
     breaks: true,
   })
 
-const { content, classList } = Astro.props
+const { content, class: classes } = Astro.props
 ---
 
-<div
-  set:html={parseMarkdown(content)}
-  class:list={['description', ...classList]}
-/>
+<div set:html={parseMarkdown(content)} class={twJoin('description', classes)} />
 
 <style is:global>
   .description ul {
