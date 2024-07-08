@@ -1,0 +1,33 @@
+---
+import type { EducationSection } from '@/types/content'
+
+import DashedDivider from '@/components/pdf/DashedDivider.astro'
+import Description from '@/components/pdf/Description.astro'
+import ListItemHeading from '@/components/pdf/ListItemHeading.astro'
+import SectionHeading from '@/components/pdf/SectionHeading.astro'
+
+export interface Props extends EducationSection {}
+
+const { config, diplomas } = Astro.props
+---
+
+<div>
+  <SectionHeading>{config.title}</SectionHeading>
+  <div class="flex flex-col">
+    {
+      diplomas.map(({ title, description, institution, dates }) => () => (
+        <>
+          <div class="flex flex-col gap-2">
+            <ListItemHeading
+              title={title}
+              subtitle={institution}
+              dates={dates}
+            />
+            <Description content={description} />
+          </div>
+          <DashedDivider />
+        </>
+      ))
+    }
+  </div>
+</div>

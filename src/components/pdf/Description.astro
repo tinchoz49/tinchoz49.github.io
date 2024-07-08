@@ -1,0 +1,14 @@
+---
+import DescriptionBase from '@/components/Description.astro'
+
+export interface Props {
+  content: string
+}
+
+const { content } = Astro.props
+---
+
+<DescriptionBase
+  content={content}
+  class="text-base font-normal text-gray-500"
+/>

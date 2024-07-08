@@ -1,0 +1,40 @@
+---
+import type { ProjectsSection } from '@/types/content'
+
+import DashedDivider from '@/components/pdf/DashedDivider.astro'
+import Description from '@/components/pdf/Description.astro'
+import LabelledValue from '@/components/pdf/LabelledValue.astro'
+import ListItemHeading from '@/components/pdf/ListItemHeading.astro'
+import SectionHeading from '@/components/pdf/SectionHeading.astro'
+import TagsList from '@/components/pdf/TagsList.astro'
+
+export interface Props extends ProjectsSection {}
+
+const { config, projects } = Astro.props
+---
+
+<div>
+  <SectionHeading>{config.title}</SectionHeading>
+  <div class="flex flex-col">
+    {
+      projects.map(
+        ({ name, description, details, pdfDetails, tagsList, dates }) =>
+          () => (
+            <>
+              <div class="flex flex-col gap-2">
+                <ListItemHeading title={name} dates={dates} />
+                <Description content={description} />
+                <div class="flex flex-col gap-1">
+                  {(pdfDetails ?? details).map((detail) => (
+                    <LabelledValue {...detail} />
+                  ))}
+                </div>
+                <TagsList {...tagsList} />
+              </div>
+              <DashedDivider />
+            </>
+          ),
+      )
+    }
+  </div>
+</div>
