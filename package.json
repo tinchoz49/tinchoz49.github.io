@@ -5,13 +5,12 @@
   "packageManager": "pnpm@9.4.0",
   "scripts": {
     "astro": "astro",
-    "build": "astro build",
+    "build": "node scripts/generate-pdf.js && astro build",
     "check": "astro check",
     "dev": "astro dev",
     "lint": "eslint . --cache",
     "fix": "npm run lint -- --fix",
-    "preview": "astro preview",
-    "test": "vitest run"
+    "preview": "astro preview"
   },
   "dependencies": {
     "@astrojs/check": "^0.7.0",
@@ -44,8 +43,7 @@
     "iconify-icon-names": "^1.1.0",
     "prettier-plugin-astro": "^0.14.0",
     "puppeteer": "^22.12.1",
-    "puppeteer-report": "^3.1.0",
-    "vitest": "^1.6.0"
+    "puppeteer-report": "^3.1.0"
   },
   "pnpm": {
     "overrides": {
