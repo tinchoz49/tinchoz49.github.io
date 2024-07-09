@@ -4,50 +4,45 @@ config:
   slug: profile
   visible: true
 image: '@/assets/profile.jpeg'
-fullName: Mark Freeman
-role: Senior React Developer
+fullName: Martín Acosta
+role: Senior JavaScript Developer
 details:
-  - label: Phone
-    value: 605 475 6961
-    url: 'tel:605 475 6961'
   - label: Email
-    value: mark.freeman.dev@gmail.com
-    url: 'mailto:mark.freeman.dev@gmail.com'
+    value: tinchoz49@gmail.com
+    url: 'mailto:tinchoz49@gmail.com'
   - label: From
-    value: 'Warsaw, Poland'
-  - label: Salary range
-    value: 18 000 - 25 000 PLN
+    value: 'Playa Union, Chubut, Argentina'
 pdfDetails:
-  - label: Phone
-    value: 605 475 6961
   - label: Email
-    value: mark.freeman.dev@gmail.com
+    value: tinchoz49@gmail.com
+  - label: From
+    value: 'Playa Union, Chubut, Argentina'
   - label: LinkedIn
-    value: /in/mark-freeman
+    value: /in/martin-g-acosta
     url: 'https://linkedin.com'
   - label: GitHub
-    value: /mark-freeman
+    value: /tinchoz49
     url: 'https://github.com'
   - label: Website
-    value: mark-freeman-personal-website.com
+    value: martin-acosta.dev
     url: /
     fullRow: true
 description: >-
-  Lorem ipsum dolor sit amet, consectetur **adipiscing elit**. In sodales ac dui
-  at *vestibulum*. In condimentum metus id dui tincidunt, in blandit mi
-  [vehicula](/). Nulla lacinia, erat sit amet elementum vulputate, lectus mauris
-  volutpat mi, vitae accumsan metus elit ut nunc. Vestibulum lacinia enim eget
-  eros fermentum scelerisque. Proin augue leo, posuere ut imperdiet vitae,
-  fermentum eu ipsum. Sed sed neque sagittis, posuere urna nec, commodo leo.
-  Pellentesque posuere justo vitae massa volutpat maximus.
+  I'm Martín Acosta, a software developer deeply invested in advancing decentralized systems and web technologies.
+
+  I focus on leveraging JavaScript and Node.js to build innovative, efficient, and scalable solutions.
+
+  I actively contribute to the open-source community, particularly in JavaScript and Node.js, with significant work on libraries for WebRTC, Fastify, JSDoc, and state management.
+  I also engaged with the developer community to discuss the latest trends and best practices in software development.
 tags:
-  - name: Open for freelance
+  - name: Open for freelance and short term contracts
   - name: Available for mentoring
-  - name: Working on side project
+  - name: Available to support Node.js development teams
+  - name: Working on open source projects
 action:
   label: Download CV
   url: /cv.pdf
-  downloadedFileName: CV-Mark_Freeman.pdf
+  downloadedFileName: CV-Martin-Acosta.pdf
 links:
   - name: GitHub
     icon: 'fa6-brands:github'

@@ -3,9 +3,12 @@ import { defineCollection, z } from 'astro:content'
 import * as links from '../utils/links'
 import * as skills from '../utils/skills'
 
-const lookupTypes = (types: object) => (val) => {
+const lookupTypes = (val) => {
   const { type, ...props } = val as { type?: string }
-  if (type) return { ...types[type], ...props }
+  if (type) {
+    if (links[type]) return { ...links[type], ...props }
+    if (skills[type]) return { ...skills[type], ...props }
+  }
   return props
 }
 
@@ -44,7 +47,7 @@ export const DownloadButtonSchema = z.object({
   downloadedFileName: z.string().optional(),
 })
 
-export const LinkButtonSchema = z.preprocess(lookupTypes(links), z.object({
+export const LinkButtonSchema = z.preprocess(lookupTypes, z.object({
   name: z.string(),
   icon: z.string(),
   url: z.string(),
@@ -52,11 +55,11 @@ export const LinkButtonSchema = z.preprocess(lookupTypes(links), z.object({
 
 export const SkillLevelSchema = z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)])
 
-export const LevelledSkillSchema = z.preprocess(lookupTypes(skills), TagSchema.extend({
+export const LevelledSkillSchema = z.preprocess(lookupTypes, TagSchema.extend({
   level: SkillLevelSchema,
 }))
 
-export const SkillSchema = z.preprocess(lookupTypes(skills), TagSchema)
+export const SkillSchema = z.preprocess(lookupTypes, TagSchema)
 
 export const SkillSetSchema = z.object({
   title: z.string(),
@@ -102,7 +105,7 @@ export const collections = {
       details: z.array(LabelledValueSchema),
       pdfDetails: z.array(LabelledValueSchema).optional(),
       description: z.string(),
-      tags: z.array(TagSchema),
+      tags: z.array(z.preprocess(lookupTypes, TagSchema)),
       action: DownloadButtonSchema,
       links: z.array(LinkButtonSchema),
     }),
@@ -124,7 +127,7 @@ export const collections = {
         description: z.string(),
         tagsList: z.object({
           title: z.string(),
-          tags: z.array(TagSchema),
+          tags: z.array(z.preprocess(lookupTypes, TagSchema)),
         }),
         links: z.array(LinkButtonSchema),
       })),
@@ -160,7 +163,7 @@ export const collections = {
         })).optional(),
         tagsList: z.object({
           title: z.string(),
-          tags: z.array(TagSchema),
+          tags: z.array(z.preprocess(lookupTypes, TagSchema)),
         }),
         links: z.array(LinkButtonSchema),
       })),

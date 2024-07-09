@@ -4,19 +4,19 @@ config:
   icon: 'fa6-solid:graduation-cap'
   visible: true
 diplomas:
-  - title: Information Technology
-    institution: Wrocław University of Science and Technology
-    # image: null
+  - title: Programmer Analyst
+    institution: University of La Plata (UNLP)
+    image: '@/assets/education/info.png'
     dates:
-      - 2014-10-01T03:00:00.000Z
-      - 2016-07-01T03:00:00.000Z
-    description: Master degree. Specialization in software development.
+      - 2007-01-01T03:00:00.000Z
+      - 2015-01-01T03:00:00.000Z
+    description: Bachelor's degree.
     links: []
-  - title: Information Technology
-    institution: Wrocław University of Science and Technology
-    # image: ''
+  - title: Professional Technician in Computer Science
+    institution: School Nro. 724 “Dr.Arturo U.Illia”
+    image: '@/assets/education/arturo.jpeg'
     dates:
-      - 2011-10-01T03:00:00.000Z
-      - 2014-07-01T03:00:00.000Z
-    description: Bachelor's degree. Specialization in application development.
+      - 2004-01-01T03:00:00.000Z
+      - 2006-12-01T03:00:00.000Z
+    description: Bachelor's degree.
     links: []

@@ -1,5 +1,9 @@
 ---
-import { getSettings } from '../utils/content'
+import { getImage } from 'astro:assets'
+
+import profileImage from '@/assets/profile.jpeg'
+import { getSettings } from '@/utils/content'
+import { SEO } from 'astro-seo'
 
 interface Props {
   title: string
@@ -8,17 +12,33 @@ interface Props {
 const { title }: Props = Astro.props
 
 const settings = await getSettings()
+
+const profileImageOptimized = await getImage({
+  src: profileImage,
+  format: 'webp',
+})
 ---
 
 <!doctype html>
 <html lang={settings.i18n.locale.code} class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
+    <SEO
+      title={title}
+      description="A heavily optimized description full of well-researched keywords."
+      openGraph={{
+        basic: {
+          title: 'A Very Descriptive Title',
+          type: 'A type.',
+          image: profileImageOptimized.src,
+        },
+      }}
+      twitter={{
+        creator: '@tinchoz49',
+      }}
+    />
   </head>
   <body
     class="flex justify-center overflow-x-hidden bg-gray-50 dark:bg-gray-900 xl:relative xl:left-7"
