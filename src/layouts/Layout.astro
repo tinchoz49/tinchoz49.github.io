@@ -26,12 +26,12 @@ const profileImageOptimized = await getImage({
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <SEO
-      title={title}
-      description="A heavily optimized description full of well-researched keywords."
+      title={title || settings.meta.title}
+      description={settings.meta.description}
       openGraph={{
         basic: {
-          title: 'A Very Descriptive Title',
-          type: 'A type.',
+          title: title || settings.meta.title,
+          type: 'summary',
           image: profileImageOptimized.src,
         },
       }}
