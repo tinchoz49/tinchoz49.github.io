@@ -5,7 +5,7 @@
   "packageManager": "pnpm@9.4.0",
   "scripts": {
     "astro": "astro",
-    "build": "node scripts/generate-pdf.js && astro build",
+    "build": "astro build",
     "check": "astro check",
     "dev": "astro dev",
     "lint": "eslint . --cache",

@@ -6,6 +6,8 @@ import compress from 'astro-compress'
 import icon from 'astro-icon'
 import webmanifest from 'astro-webmanifest'
 
+import generatePDF from './integrations/generate-pdf.js'
+
 /** @type {import('./src/types/content').Settings} */
 const settings = JSON.parse(await readFile('./src/content/settings/data.json'))
 
@@ -13,6 +15,7 @@ export default defineConfig({
   integrations: [
     tailwind(),
     icon(),
+    generatePDF(),
     webmanifest({
       name: settings.meta.title,
       icon: `.${settings.meta.faviconPath}`, // source for favicon & icons

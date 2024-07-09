@@ -22,7 +22,12 @@ const retry = async ({ promise, retries, retryTime }) => {
   }
 }
 
-const main = async () => {
+/**
+ * @param {import('astro').AstroIntegrationLogger} logger
+ */
+const generatePDF = async (logger) => {
+  logger.info('Building PDF')
+
   const child = exec('pnpm dev')
 
   const browser = await puppeteer.launch({ headless: true })
@@ -49,4 +54,11 @@ const main = async () => {
   child.kill()
 }
 
-main()
+export default function () {
+  return /** @type {import('astro').AstroIntegration} */({
+    name: 'generate:pdf',
+    hooks: {
+      'astro:build:start': ({ logger }) => generatePDF(logger),
+    },
+  })
+}
