@@ -2,14 +2,11 @@ config:
   title: Testimonials
   slug: testimonials
   icon: 'fa6-solid:comment'
-  visible: true
-testimonials:
-  - image: '@/assets/profile.jpeg'
-    author: Howard Stewart
-    relation: We work together as front-end developers at Google
-    content: >-
-      In nec mattis sem. Morbi purus lorem, euismod ac varius at, aliquet vitae
-      augue. Pellentesque ut facilisis felis. In sed dui blandit, aliquet odio
-      eu, elementum leo. In facilisis dapibus tortor ac volutpat. Cras cursus
-      nec odio maximus elementum.
-    links: []
+  visible: false
+testimonials: []
+# - image: '@/assets/profile.jpeg'
+#   author: Martin Acosta
+#   relation: bla bla
+#   content: >-
+#     bla bla
+#   links: []

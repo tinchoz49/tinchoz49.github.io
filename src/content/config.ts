@@ -194,7 +194,7 @@ export const collections = {
       })),
     }),
   }),
-  favorites: defineCollection({
+  feed: defineCollection({
     type: 'data',
     schema: ({ image }) => SectionSchema.extend({
       books: z.object({

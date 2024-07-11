@@ -1,0 +1,11 @@
+config:
+  title: My feed
+  slug: personal
+  icon: 'fa6-solid:rss'
+  visible: true
+videos:
+  title: Talks
+  data:
+    - image: '@/assets/favorites/microservices.png'
+      title: Building Resilient Frontend Architecture • Monica Lent • GOTO 2019
+      url: 'https://youtu.be/FrL8at9qGrQ'

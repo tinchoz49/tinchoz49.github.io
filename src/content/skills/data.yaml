@@ -26,6 +26,8 @@ skillSets:
         level: 5
       - type: bun
         level: 5
+      - type: vite
+        level: 5
       - type: moleculer
         level: 5
       - type: git

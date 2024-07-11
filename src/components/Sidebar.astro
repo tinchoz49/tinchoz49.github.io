@@ -1,15 +1,14 @@
 ---
-import type { Sections } from '@/types/content'
+import type { SectionConfig } from '@/types/content'
 
 import SidebarItem from './SidebarItem.astro'
 
 export interface Props {
   className?: string
-  sections: Partial<Sections>
+  sectionConfigs: SectionConfig[]
 }
 
-const { className, sections } = Astro.props
-const sectionConfigs = Object.values(sections).map((section) => section.config)
+const { className, sectionConfigs } = Astro.props
 ---
 
 <nav

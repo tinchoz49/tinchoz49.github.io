@@ -1,0 +1,84 @@
+config:
+  title: My favorites
+  slug: favorites
+  icon: 'fa6-solid:star'
+  visible: true
+books:
+  title: Books I read
+  data:
+    - image: '@/assets/favorites/the-rust-programming-language.jpg'
+      title: The Rust Programming Language
+      author: 'Carol Nichols, Steve Klabnik'
+      url: 'https://www.amazon.com/Rust-Programming-Language-Steve-Klabnik/dp/1593278284'
+    - image: '@/assets/favorites/the-good-parts.jpg'
+      title: 'JavaScript: The Good Parts: The Good Parts'
+      author: Douglas Crockford
+      url: 'https://www.amazon.com/JavaScript-Good-Parts-Douglas-Crockford'
+    - image: '@/assets/favorites/fastify.jpg'
+      title: Accelerating Server-Side Development with Fastify
+      author: 'Manuel Spigolon, Maksim Sinik, Matteo Collina'
+      url: 'https://www.amazon.com/Accelerating-Server-Side-Development-Fastify-comprehensive/dp/1800563582'
+    - image: '@/assets/favorites/complexity.jpg'
+      title: 'Complexity: A Guided Tour'
+      author: Melanie Mitchell
+      url: 'https://www.amazon.com/Complexity-Guided-Tour-Melanie-Mitchell/dp/0199798109'
+people:
+  title: People I learn from
+  data:
+    - image: '@/assets/favorites/douglas.jpg'
+      name: Douglas Crockford
+      url: 'https://www.crockford.com/blog.html'
+    - image: '@/assets/favorites/matteo.jpeg'
+      name: Matteo Collina
+      url: 'https://github.com/mcollina'
+    - image: '@/assets/favorites/mafintosh.jpeg'
+      name: Mathias Buus
+      url: 'https://github.com/mafintosh'
+    - image: '@/assets/favorites/martin.jpg'
+      name: Martin Fowler
+      url: 'https://martinfowler.com/'
+    - image: '@/assets/favorites/feross-japan.jpg'
+      name: Feross Aboukhadijeh
+      url: 'https://feross.org/'
+    - image: '@/assets/favorites/ryan.jpg'
+      name: Ryan Carniato
+      url: 'https://x.com/RyanCarniato'
+# videos:
+#   title: Videos I watched
+#   data:
+#     - image: '@/assets/favorites/the-good-parts.jpg'
+#       title: Building Resilient Frontend Architecture • Monica Lent • GOTO 2019
+#       url: 'https://youtu.be/TqfbAXCCVwE'
+#     - image: '@/assets/favorites/the-good-parts.jpg'
+#       title: Scaling Yourself • Scott Hanselman • GOTO 2012
+#       url: 'https://youtu.be/FS1mnISoG7U'
+#     - image: '@/assets/favorites/the-good-parts.jpg'
+#       title: Why Isn't Functional Programming the Norm? - Richard Feldman
+#       url: 'https://youtu.be/QyJZzq0v7Z4'
+# medias:
+#   title: Media I follow
+#   data:
+#     - image: '@/assets/favorites/the-good-parts.jpg'
+#       title: Fireship.io
+#       type: YouTube channel
+#       url: 'https://www.youtube.com/c/Fireship'
+#     - image: '@/assets/favorites/the-good-parts.jpg'
+#       title: Healthy Software Developer
+#       type: YouTube channel
+#       url: 'https://www.youtube.com/channel/UCfe_znKY1ukrqlGActlFmaQ'
+#     - image: '@/assets/favorites/the-good-parts.jpg'
+#       title: Bytes
+#       type: Newsletter
+#       url: 'https://bytes.dev/'
+#     - image: '@/assets/favorites/the-good-parts.jpg'
+#       title: TypeScript Weekly
+#       type: Newsletter
+#       url: 'https://typescript-weekly.com/'
+#     - image: '@/assets/favorites/the-good-parts.jpg'
+#       title: Front End Happy Hour
+#       type: Podcast
+#       url: 'https://www.frontendhappyhour.com/'
+#     - image: '@/assets/favorites/the-good-parts.jpg'
+#       title: .cult by Honeypot
+#       type: Blog
+#       url: 'https://cult.honeypot.io/'

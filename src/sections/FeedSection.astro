@@ -1,31 +1,31 @@
 ---
-import type { FavoritesSection } from '@/types/content'
+import type { FeedSection } from '@/types/content'
 
 import BookTile from '@/components/BookTile.astro'
-import FavoritesSubSection from '@/components/FavoritesSubSection.astro'
+import FeedSubSection from '@/components/FeedSubSection.astro'
 import MediaTile from '@/components/MediaTile.astro'
 import PersonTile from '@/components/PersonTile.astro'
 import SectionCard from '@/components/SectionCard.astro'
 import VideoTile from '@/components/VideoTile.astro'
 
-export interface Props extends FavoritesSection {}
+export interface Props extends FeedSection {}
 
 const { config, books, medias, people, videos } = Astro.props
 ---
 
 <SectionCard {...config}>
   <div class="flex flex-col gap-16">
-    <FavoritesSubSection minTileWidth={160} subSection={books}>
+    <FeedSubSection minTileWidth={160} subSection={books}>
       {books?.data.map((book) => <BookTile {...book} />)}
-    </FavoritesSubSection>
-    <FavoritesSubSection minTileWidth={120} subSection={people}>
+    </FeedSubSection>
+    <FeedSubSection minTileWidth={120} subSection={people}>
       {people?.data.map((person) => <PersonTile {...person} />)}
-    </FavoritesSubSection>
-    <FavoritesSubSection minTileWidth={204} subSection={videos}>
+    </FeedSubSection>
+    <FeedSubSection minTileWidth={204} subSection={videos}>
       {videos?.data.map((video) => <VideoTile {...video} />)}
-    </FavoritesSubSection>
-    <FavoritesSubSection minTileWidth={120} subSection={medias}>
+    </FeedSubSection>
+    <FeedSubSection minTileWidth={120} subSection={medias}>
       {medias?.data.map((media) => <MediaTile {...media} />)}
-    </FavoritesSubSection>
+    </FeedSubSection>
   </div>
 </SectionCard>

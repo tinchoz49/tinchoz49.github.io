@@ -279,3 +279,10 @@ export const jquery: Skill = {
   iconColor: '#0769AD',
   url: 'https://jquery.com/',
 }
+
+export const vite: Skill = {
+  name: 'Vite',
+  icon: 'simple-icons:vite',
+  iconColor: '#646CFF',
+  url: 'https://vitejs.dev/'
+}

@@ -10,6 +10,7 @@ const sections = [
   'education',
   'testimonials',
   'favorites',
+  'personal',
 ] as const
 
 export const getSettings: () => Promise<Settings> = async () => {
@@ -18,9 +19,17 @@ export const getSettings: () => Promise<Settings> = async () => {
 }
 
 export const getSections: () => Promise<Partial<Sections>> = () => Promise.all(
-  sections.map(sectionName => getEntry(sectionName, 'data'))
+  sections.map((sectionName) => {
+    if (sectionName === 'favorites' || sectionName === 'personal') return getEntry('feed', sectionName)
+    return getEntry(sectionName, 'data')
+  })
 ).then(entries =>
   entries.reduce((result, curr) => {
+    if (curr.collection === 'feed') {
+      result[curr.id] = curr.data
+      return result
+    }
+
     result[curr.collection] = curr.data
     return result
   }, {} satisfies Partial<Sections>)
