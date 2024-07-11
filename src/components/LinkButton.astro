@@ -1,11 +1,12 @@
 ---
 import type { LinkButton } from '@/types/shared'
+import type { JSX } from 'astro/jsx-runtime'
 
 import Icon from './Icon.astro'
 
 interface Props
   extends Omit<LinkButton, 'url'>,
-    Omit<astroHTML.JSX.HTMLAttributes, 'slot'> {
+    Omit<JSX.HTMLAttributes, 'slot'> {
   url?: LinkButton['url']
   as?: 'a' | 'button'
 }

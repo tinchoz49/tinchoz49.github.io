@@ -21,21 +21,6 @@ const config = standard(
     ],
   },
   {
-    files: ['**/*.astro'],
-    languageOptions: {
-      globals: {
-        astroHTML: true,
-      },
-    },
-    rules: {
-      'style/jsx-closing-bracket-location': 'off',
-      'style/jsx-first-prop-new-line': 'off',
-      'style/jsx-indent-props': 'off',
-      'style/jsx-max-props-per-line': 'off',
-      'style/multiline-ternary': 'off',
-    },
-  },
-  {
     languageOptions: {
       globals: {
         NodeJS: true,

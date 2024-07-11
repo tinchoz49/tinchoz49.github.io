@@ -8,13 +8,13 @@ fullName: Martín Acosta
 role: Senior JavaScript Developer
 details:
   - label: Email
-    value: tinchoz49@gmail.com
-    url: 'mailto:tinchoz49@gmail.com'
+    value: martin@geutstudio.com
+    url: 'mailto:martin@geutstudio.com'
   - label: From
     value: 'Playa Union, Chubut, Argentina'
 pdfDetails:
   - label: Email
-    value: tinchoz49@gmail.com
+    value: martin@geutstudio.com
   - label: From
     value: 'Playa Union, Chubut, Argentina'
   - label: LinkedIn

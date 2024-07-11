@@ -1,4 +1,6 @@
 ---
+import type { JSX } from 'astro/jsx-runtime'
+
 type TypographyVariant = keyof typeof variantToElement
 
 const variantToElement = {
@@ -49,8 +51,8 @@ interface LinkProps {
   download?: string
 }
 
-interface Props extends Omit<astroHTML.JSX.HTMLAttributes, 'slot'>, LinkProps {
-  as?: keyof astroHTML.JSX.IntrinsicElements
+interface Props extends Omit<JSX.HTMLAttributes, 'slot'>, LinkProps {
+  as?: keyof JSX.IntrinsicElements
   variant?: TypographyVariant
 }
 
