@@ -25,7 +25,7 @@ const generatePDF = async (logger) => {
     await page.goto('http://localhost:4321/pdf', { waitUntil: 'networkidle0' })
 
     await pdfPage(page, {
-      path: path.join(import.meta.dirname, '..', 'dist', 'cv.pdf'),
+      path: path.join(process.cwd(), 'dist', 'cv.pdf'),
       format: 'A4',
       printBackground: true,
       margin: { top: '10mm', right: '10mm', bottom: '10mm', left: '10mm' },
