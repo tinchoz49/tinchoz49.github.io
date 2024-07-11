@@ -83,8 +83,7 @@ projects:
         - [openapi-box:](https://github.com/geut/openapi-box) Generating TypeBox schemas from OpenAPI.
         - [astro-starter:](https://github.com/tinchoz49/astro-starter) A starter template for Astro projects with TypeScript, Tailwind, Prettier, and Standard.
 
-      <br/>
-      And I always strive to submit pull requests to improve and help the projects that I love!
+      And I always strive to submit pull requests to improve and support the projects that I love!
     tagsList:
       title: Technologies
       tags:
