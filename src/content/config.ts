@@ -3,8 +3,8 @@ import { defineCollection, z } from 'astro:content'
 import * as links from '../utils/links'
 import * as skills from '../utils/skills'
 
-const lookupTypes = (val) => {
-  const { type, ...props } = val as { type?: string }
+const lookupTypes = (val: { type?: string }) => {
+  const { type, ...props } = val
   if (type) {
     if (links[type]) return { ...links[type], ...props }
     if (skills[type]) return { ...skills[type], ...props }

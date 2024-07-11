@@ -79,8 +79,8 @@ importers:
         specifier: ^8.57.0
         version: 8.57.0
       eslint-config-standard-ext:
-        specifier: ^0.0.25
-        version: 0.0.25(@vue/compiler-sfc@3.4.27)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@8.57.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@8.57.0))(eslint@8.57.0)(prettier-plugin-astro@0.14.0)(typescript@5.5.3)(vitest@1.6.0(@types/node@20.14.10)(lightningcss@1.25.1)(terser@5.31.1))
+        specifier: ^0.0.26
+        version: 0.0.26(@vue/compiler-sfc@3.4.27)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@8.57.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@8.57.0))(eslint@8.57.0)(prettier-plugin-astro@0.14.0)(typescript@5.5.3)(vitest@1.6.0(@types/node@20.14.10)(lightningcss@1.25.1)(terser@5.31.1))
       eslint-plugin-astro:
         specifier: ^1.2.3
         version: 1.2.3(eslint@8.57.0)(typescript@5.5.3)
@@ -1852,8 +1852,8 @@ packages:
   eslint-config-flat-gitignore@0.1.7:
     resolution: {integrity: sha512-K4UcPriNg6IvNozipPVnLRxuhxys9vRkxYoLLdMPgPDngtWEP/xBT946oUYQHUWLoz4jvX5k+AF/MWh3VN5Lrg==}
 
-  eslint-config-standard-ext@0.0.25:
-    resolution: {integrity: sha512-c1Lol6s621TnKfyvG7RTqf8hmW0Udwca5U1SnszrwmelJLrgAjp8HlkanSaT4DF3iLKcb0HSF77mkId/ksFynQ==}
+  eslint-config-standard-ext@0.0.26:
+    resolution: {integrity: sha512-MdL5TcuPnxgJJfb+g7lsxkJ6N8Fu0mJPoN6t+i9ku7SgyAOvSLipHnqKgQ3my3XP/+aydpInrxP26/ikhm5y9A==}
 
   eslint-flat-config-utils@0.2.5:
     resolution: {integrity: sha512-iO+yLZtC/LKgACerkpvsZ6NoRVB2sxT04mOpnNcEM1aTwKy+6TsT46PUvrML4y2uVBS6I67hRCd2JiKAPaL/Uw==}
@@ -3430,8 +3430,8 @@ packages:
     peerDependencies:
       postcss: ^8.2.14
 
-  postcss-selector-parser@6.1.0:
-    resolution: {integrity: sha512-UMz42UD0UY0EApS0ZL9o1XnLhSTtvvvLe5Dc2H2O56fvRZi+KulDyf5ctDhhtYJBGKStV2FL1fy6253cmLgqVQ==}
+  postcss-selector-parser@6.1.1:
+    resolution: {integrity: sha512-b4dlw/9V8A71rLIDsSwVmak9z2DuBUB7CA1/wSdelNEzqsjoSPeADTWNO09lpH49Diy3/JIZ2bSPB1dI3LJCHg==}
     engines: {node: '>=4'}
 
   postcss-value-parser@4.2.0:
@@ -6608,7 +6608,7 @@ snapshots:
       find-up: 7.0.0
       parse-gitignore: 2.0.0
 
-  eslint-config-standard-ext@0.0.25(@vue/compiler-sfc@3.4.27)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@8.57.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@8.57.0))(eslint@8.57.0)(prettier-plugin-astro@0.14.0)(typescript@5.5.3)(vitest@1.6.0(@types/node@20.14.10)(lightningcss@1.25.1)(terser@5.31.1)):
+  eslint-config-standard-ext@0.0.26(@vue/compiler-sfc@3.4.27)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@8.57.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@8.57.0))(eslint@8.57.0)(prettier-plugin-astro@0.14.0)(typescript@5.5.3)(vitest@1.6.0(@types/node@20.14.10)(lightningcss@1.25.1)(terser@5.31.1)):
     dependencies:
       '@antfu/eslint-config': 2.22.0(@vue/compiler-sfc@3.4.27)(astro-eslint-parser@1.0.2(typescript@5.5.3))(eslint-plugin-astro@1.2.3(eslint@8.57.0)(typescript@5.5.3))(eslint-plugin-format@0.1.2(eslint@8.57.0))(eslint@8.57.0)(prettier-plugin-astro@0.14.0)(typescript@5.5.3)(vitest@1.6.0(@types/node@20.14.10)(lightningcss@1.25.1)(terser@5.31.1))
       local-pkg: 0.5.0
@@ -6672,7 +6672,7 @@ snapshots:
       eslint-compat-utils: 0.5.1(eslint@8.57.0)
       globals: 15.8.0
       postcss: 8.4.39
-      postcss-selector-parser: 6.1.0
+      postcss-selector-parser: 6.1.1
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -6878,7 +6878,7 @@ snapshots:
       globals: 13.24.0
       natural-compare: 1.4.0
       nth-check: 2.1.1
-      postcss-selector-parser: 6.1.0
+      postcss-selector-parser: 6.1.1
       semver: 7.6.2
       vue-eslint-parser: 9.4.3(eslint@8.57.0)
       xml-name-validator: 4.0.0
@@ -8524,9 +8524,9 @@ snapshots:
   postcss-nested@6.0.1(postcss@8.4.39):
     dependencies:
       postcss: 8.4.39
-      postcss-selector-parser: 6.1.0
+      postcss-selector-parser: 6.1.1
 
-  postcss-selector-parser@6.1.0:
+  postcss-selector-parser@6.1.1:
     dependencies:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
@@ -9226,7 +9226,7 @@ snapshots:
       postcss-js: 4.0.1(postcss@8.4.39)
       postcss-load-config: 4.0.2(postcss@8.4.39)
       postcss-nested: 6.0.1(postcss@8.4.39)
-      postcss-selector-parser: 6.1.0
+      postcss-selector-parser: 6.1.1
       resolve: 1.22.8
       sucrase: 3.35.0
     transitivePeerDependencies:

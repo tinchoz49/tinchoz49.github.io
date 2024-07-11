@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "eslint": "^8.57.0",
-    "eslint-config-standard-ext": "^0.0.25",
+    "eslint-config-standard-ext": "^0.0.26",
     "eslint-plugin-astro": "^1.2.3",
     "eslint-plugin-format": "^0.1.2",
     "eslint-plugin-jsx-a11y": "^6.9.0",

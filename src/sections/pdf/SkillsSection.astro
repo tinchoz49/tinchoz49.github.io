@@ -1,5 +1,5 @@
 ---
-import type { SkillsSection } from '@/types/content'
+import type { Skill, SkillsSection } from '@/types/content'
 
 import SectionHeading from '@/components/pdf/SectionHeading.astro'
 
@@ -18,7 +18,7 @@ const { config, skillSets } = Astro.props
             {skillSet.title}
           </div>
           <div class="mt-2 flex flex-wrap gap-3.5 text-sm text-gray-700">
-            {skillSet.skills.map((skill) => {
+            {skillSet.skills.map((skill: Skill) => {
               if ('level' in skill) {
                 return (
                   <div class="flex h-6 w-fit overflow-hidden rounded">
