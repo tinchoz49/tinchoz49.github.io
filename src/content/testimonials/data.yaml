@@ -1,0 +1,12 @@
+config:
+  title: Testimonials
+  slug: testimonials
+  icon: 'fa6-solid:comment'
+  visible: false
+testimonials: []
+# - image: '@/assets/profile.jpeg'
+#   author: Martin Acosta
+#   relation: bla bla
+#   content: >-
+#     bla bla
+#   links: []

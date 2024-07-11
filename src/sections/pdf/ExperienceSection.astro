@@ -1,0 +1,31 @@
+---
+import type { ExperienceSection } from '@/types/content'
+
+import DashedDivider from '@/components/pdf/DashedDivider.astro'
+import Description from '@/components/pdf/Description.astro'
+import ListItemHeading from '@/components/pdf/ListItemHeading.astro'
+import SectionHeading from '@/components/pdf/SectionHeading.astro'
+import TagsList from '@/components/pdf/TagsList.astro'
+
+export interface Props extends ExperienceSection {}
+
+const { config, jobs } = Astro.props
+---
+
+<div>
+  <SectionHeading>{config.title}</SectionHeading>
+  <div class="flex flex-col">
+    {
+      jobs.map(({ company, role, description, tagsList, dates }) => () => (
+        <>
+          <div class="flex flex-col gap-2">
+            <ListItemHeading title={role} subtitle={company} dates={dates} />
+            <Description content={description} />
+            <TagsList {...tagsList} />
+          </div>
+          <DashedDivider />
+        </>
+      ))
+    }
+  </div>
+</div>

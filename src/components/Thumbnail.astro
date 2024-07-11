@@ -1,0 +1,33 @@
+---
+import type { LocalImageProps, RemoteImageProps } from 'astro:assets'
+
+import Photo from './Photo.astro'
+
+interface LocalProps {
+  src: LocalImageProps['src']
+  alt: string
+  size: 'large' | 'small'
+}
+
+interface RemoteProps {
+  src: RemoteImageProps['src']
+  alt: string
+  size: 'large' | 'small'
+}
+
+type Props = RemoteProps | LocalProps
+
+const { size, ...props } = Astro.props
+
+const sizeToClass = /* tw */ {
+  large: 'h-18 w-18',
+  small: 'h-12 w-12',
+}
+---
+
+<Photo
+  {...props}
+  class:list={['hidden rounded-md sm:block', sizeToClass[size]]}
+  width={104}
+  height={104}
+/>

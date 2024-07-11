@@ -1,0 +1,126 @@
+config:
+  title: Work experience
+  slug: experience
+  icon: 'fa6-solid:suitcase'
+  visible: true
+jobs:
+  - role: Senior JavaScript developer
+    company: Alliants
+    image: '@/assets/experience/alliants.jpeg'
+    dates:
+      - 2022-02-01T00:00:00.000Z
+      - 2024-07-01T00:00:00.000Z
+    description: |2-
+      I was part of a team that built and deployed multiple serverless APIs in Node.js to support our frontend teams.
+
+      My responsibilities included:
+      - Creating various tools to facilitate development, documentation, testing, CI, and deployment of these projects.
+      - Enhancing frontend development by performing major refactors on older React apps to Astro with React v18.
+    tagsList:
+      title: Technologies
+      tags:
+        - type: react
+        - type: node
+        - type: aws
+        - type: eslint
+        - type: typescript
+        - type: serverless
+        - type: esbuild
+        - type: vitest
+        - type: openapi
+        - type: astro
+        - type: postgres
+        - type: githubActions
+        - type: vite
+    links:
+      - type: linkedin
+        url: https://www.linkedin.com/company/alliants/mycompany/
+      - type: website
+        url: https://es.alliants.com/
+  - role: Co-founder and developer
+    company: Geut
+    image: '@/assets/experience/geut.png'
+    dates:
+      - 2018-04-01T00:00:00.000Z
+      - null
+    description: |2-
+      My role involved being a key developer and contributor to various innovative and decentralized technology projects.<br/>
+      My responsibilities included:
+        - **Software Development:** Leading and participating in the development of open-source projects, such as discovery-swarm-webrtc, hyper-hooks, and swarm-hooks, which are essential for the P2P ecosystem.
+        - **Collaboration:** Working closely with partners like Liberate Science to build and enhance decentralized infrastructures, such as the p2pcommons, which support peer-to-peer networks for scientific content creation and distribution.
+        - **Innovation:** Driving the development of unique products like SHER, a decentralized live audio platform, and Permanent Seeder, a powerful hyperdrive seeder, which showcase GEUT's commitment to cutting-edge technology.
+        - **Community Engagement:** Actively contributing to the open-source community by hosting comm-comm meetings, participating in consortiums, and ensuring that GEUT remains at the forefront of the decentralized tech movement.
+        - **Quality Assurance:** Ensuring that all products and projects developed under my supervision were of the highest quality, both in terms of performance and user experience.
+
+      <br/>
+      My role was pivotal in shaping the technical direction and success of GEUT's projects, contributing to the company's reputation as a leader in decentralized software development.
+    tagsList:
+      title: Technologies
+      tags:
+        - type: react
+        - type: node
+        - type: aws
+        - type: eslint
+        - type: typescript
+        - type: esbuild
+        - type: vitest
+        - type: openapi
+        - type: astro
+        - type: pnpm
+        - type: webrtc
+        - type: wasm
+        - type: apollo
+        - type: fastify
+        - type: graphql
+        - type: openapi
+        - type: postgres
+        - type: githubActions
+        - type: vite
+    links:
+      - type: linkedin
+        url: https://www.linkedin.com/company/23246213
+      - type: github
+        url: https://github.com/geut
+  - role: Senior Node.js developer
+    company: Ingenious
+    image: '@/assets/experience/ingenious.png'
+    dates:
+      - 2017-03-01T00:00:00.000Z
+      - 2018-03-01T00:00:00.000Z
+    description: |2-
+      I worked on creating the "Vamos" application.<br/>
+      In this challenging project, I had to build:
+        - A microservice architecture to provide scalable APIs for partners and end users.
+        - A React web application partners.
+        - A React Native application for end users.
+    tagsList:
+      title: Technologies
+      tags:
+        - type: moleculer
+        - type: fastify
+        - type: postgres
+        - type: mongo
+        - type: react
+    links:
+      - type: website
+        url: https://ingenious.agency/
+      - type: demo
+        url: https://www.vamosbus.com.uy/
+  - role: PHP/JavaScript developer
+    company: Language Trainers
+    image: '@/assets/experience/language.png'
+    dates:
+      - 2010-03-01T00:00:00.000Z
+      - 2017-03-01T00:00:00.000Z
+    description: |2-
+      I was in charge of the frontend development for the company's commercial sites and created a backend to manage the content used by these sites. These sites were developed in PHP using the Laravel framework.
+    tagsList:
+      title: Technologies
+      tags:
+        - type: laravel
+        - type: php
+        - type: mysql
+        - type: jquery
+    links:
+      - type: website
+        url: https://www.languagetrainers.com/

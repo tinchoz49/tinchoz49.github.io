@@ -1,0 +1,27 @@
+---
+import type { Video } from '@/types/content'
+
+import Photo from '@/components/Photo.astro'
+import Typography from '@/components/Typography.astro'
+
+export interface Props extends Video {}
+
+const { title, url, image } = Astro.props
+---
+
+<a
+  href={url}
+  target="_blank"
+  class="flex w-full flex-col gap-3 transition duration-300 hover:-translate-y-1 hover:scale-110"
+>
+  <Photo
+    class="aspect-video rounded-lg object-cover shadow-md"
+    src={image}
+    alt={title}
+    width={480}
+    height={270}
+  />
+  <Typography variant="tile-title">
+    {title}
+  </Typography>
+</a>

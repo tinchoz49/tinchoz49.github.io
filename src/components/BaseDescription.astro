@@ -1,0 +1,46 @@
+---
+import { marked } from 'marked'
+import { twJoin } from 'tailwind-merge'
+
+interface Props {
+  content: string
+  class?: string
+}
+
+const minIndent = (str: string) => {
+  const match = str.match(/^[\t ]*(?=\S)/gm)
+
+  if (!match) return 0
+
+  return match.reduce((r, a) => Math.min(r, a.length), Number.POSITIVE_INFINITY)
+}
+
+const stripIndent = (str: string) => {
+  const indent = minIndent(str)
+
+  if (indent === 0) return str
+
+  const regex = new RegExp(`^[ \\t]{${indent}}`, 'gm')
+
+  return str.replace(regex, '')
+}
+
+const parseMarkdown = (str: string) =>
+  marked.parse(stripIndent(str), {
+    breaks: true,
+  })
+
+const { content, class: classes } = Astro.props
+---
+
+<div set:html={parseMarkdown(content)} class={twJoin('description', classes)} />
+
+<style is:global>
+  .description ul {
+    @apply list-disc pl-5;
+  }
+
+  .description a {
+    @apply underline opacity-90;
+  }
+</style>

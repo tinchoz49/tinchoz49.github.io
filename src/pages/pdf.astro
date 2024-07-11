@@ -1,0 +1,47 @@
+---
+import Fonts from '@/components/Fonts.astro'
+import Footer from '@/components/pdf/Footer.astro'
+import EducationSection from '@/sections/pdf/EducationSection.astro'
+import ExperienceSection from '@/sections/pdf/ExperienceSection.astro'
+import MainSection from '@/sections/pdf/MainSection.astro'
+import ProjectsSection from '@/sections/pdf/ProjectsSection.astro'
+import SkillsSection from '@/sections/pdf/SkillsSection.astro'
+import { getSections, getSettings } from '@/utils/content'
+
+const settings = await getSettings()
+const sections = await getSections()
+---
+
+<!doctype html>
+<html lang={settings.i18n.locale.code}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>PDF preview</title>
+    <Fonts />
+  </head>
+  <body class="flex flex-col bg-white p-[10mm] print:p-0">
+    {sections?.main?.config?.visible && <MainSection {...sections.main} />}
+    {
+      sections?.skills?.config?.visible && (
+        <SkillsSection {...sections.skills} />
+      )
+    }
+    {
+      sections?.experience?.config?.visible && (
+        <ExperienceSection {...sections.experience} />
+      )
+    }
+    {
+      sections?.projects?.config?.visible && (
+        <ProjectsSection {...sections.projects} />
+      )
+    }
+    {
+      sections?.education?.config?.visible && (
+        <EducationSection {...sections.education} />
+      )
+    }
+    {settings.pdf?.footer && <Footer>{settings.pdf.footer}</Footer>}
+  </body>
+</html>

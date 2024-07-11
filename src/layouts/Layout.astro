@@ -1,0 +1,48 @@
+---
+import { getImage } from 'astro:assets'
+
+import profileImage from '@/assets/profile.jpeg'
+import { getSettings } from '@/utils/content'
+import { SEO } from 'astro-seo'
+
+interface Props {
+  title: string
+}
+
+const { title }: Props = Astro.props
+
+const settings = await getSettings()
+
+const profileImageOptimized = await getImage({
+  src: profileImage,
+  format: 'webp',
+})
+---
+
+<!doctype html>
+<html lang={settings.i18n.locale.code} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      title={title || settings.meta.title}
+      description={settings.meta.description}
+      openGraph={{
+        basic: {
+          title: title || settings.meta.title,
+          type: 'summary',
+          image: profileImageOptimized.src,
+        },
+      }}
+      twitter={{
+        creator: '@tinchoz49',
+      }}
+    />
+  </head>
+  <body
+    class="flex justify-center overflow-x-hidden bg-gray-50 dark:bg-gray-900 xl:relative xl:left-7"
+  >
+    <slot />
+  </body>
+</html>

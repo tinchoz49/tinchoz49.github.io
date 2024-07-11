@@ -1,0 +1,99 @@
+config:
+  title: Projects
+  slug: projects
+  icon: 'fa6-solid:rocket'
+  visible: true
+  screenshots:
+    title: Screenshots
+    icon: 'fa6-solid:images'
+projects:
+  - name: Sher
+    image: '@/assets/projects/sher.png'
+    dates:
+      - 2020-03-01T00:00:00.000Z
+      - 2024-06-01T00:00:00.000Z
+    details:
+      - label: Team size
+        value: 3 person
+      - label: My role
+        value:
+          - Tech Lead Developer
+          - JavaScript Developer
+      - label: Company
+        value: Geut
+      - label: Category
+        value:
+          - Web app
+          - P2P
+          - Audio Streaming
+    pdfDetails:
+      - label: Web
+        value: 'https://discover.sher.app/'
+        url: '#'
+    screenshots:
+      - image: '@/assets/projects/sher0.png'
+        alt: Operator Streamer View
+      - image: '@/assets/projects/sher1.png'
+        alt: Listener Audio Player
+    description: >-
+      Sher is a decentralized live audio platform developed by GEUT. It aims to revolutionize how live audio content is created, shared, and consumed by leveraging peer-to-peer (P2P) technologies. The platform offers a decentralized approach, meaning it operates without a central server, enhancing privacy, security, and resilience.<br/>
+
+      Key features of Sher include:
+        - **Decentralized Infrastructure:** By utilizing P2P networks, SHER.app ensures that audio content is distributed directly between users, reducing dependency on centralized servers and increasing the platform's robustness.
+        - **Live Audio Streaming:** SHER.app allows users to broadcast live audio sessions, making it suitable for various applications, including podcasts, live shows, and real-time discussions.
+        - **Community Focus:** The platform is designed to foster a community-driven environment where users can connect, share, and interact with each other in real time.
+        - **Open Source:** As an open-source project, SHER.app invites contributions from developers worldwide, promoting transparency, innovation, and continuous improvement.
+
+      <br/>
+      Overall, SHER.app embodies GEUT's commitment to building cutting-edge, decentralized products that empower users and enhance the digital experience.
+    tagsList:
+      title: Technologies
+      tags:
+        - type: node
+        - type: eslint
+        - type: react
+        - type: wasm
+        - type: fastify
+        - type: webrtc
+    links:
+      - type: website
+        url: https://discover.sher.app/
+      - type: demo
+        url: https://sher.app/
+  - name: Open Source
+    image: '@/assets/projects/opensource.png'
+    dates:
+      - 2016-01-01T00:00:00.000Z
+      - 2024-06-01T00:00:00.000Z
+    details:
+      - label: Category
+        value:
+          - Open Source Projects
+          - NPM
+          - Node Libraries
+          - Node Tools
+    pdfDetails: []
+    screenshots: []
+    description: >-
+      For a long time, I've been contributing to the open-source ecosystem with many projects of my own authorship, such as:
+        - [discovery-swarm-webrtc:](https://github.com/geut/discovery-swarm-webrtc) A WebRTC-based discovery swarm.
+        - [fastify-uws:](https://github.com/geut/fastify-uws) Integrating uWebSocket.js with Fastify.
+        - [jsdast:](https://github.com/geut/jsdast) A JSDoc Abstract Syntax Tree.
+        - [staty:](https://github.com/geut/staty) A library for creating proxy-state from plain objects.
+        - [openapi-box:](https://github.com/geut/openapi-box) Generating TypeBox schemas from OpenAPI.
+        - [astro-starter:](https://github.com/tinchoz49/astro-starter) A starter template for Astro projects with TypeScript, Tailwind, Prettier, and Standard.
+
+      <br/>
+      And I always strive to submit pull requests to improve and help the projects that I love!
+    tagsList:
+      title: Technologies
+      tags:
+        - type: node
+        - type: eslint
+        - type: react
+        - type: wasm
+        - type: fastify
+        - type: webrtc
+        - type: openapi
+        - type: astro
+    links: []

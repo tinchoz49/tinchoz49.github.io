@@ -1,0 +1,50 @@
+---
+import type { SectionConfig } from '@/types/content'
+
+import Sidebar from '@/components/Sidebar.astro'
+import ThemeToggle from '@/components/ThemeToggle.astro'
+import Layout from '@/layouts/Layout.astro'
+import EducationSection from '@/sections/EducationSection.astro'
+import ExperienceSection from '@/sections/ExperienceSection.astro'
+import FeedSection from '@/sections/FeedSection.astro'
+import MainSection from '@/sections/MainSection.astro'
+import ProjectsSection from '@/sections/ProjectsSection.astro'
+import SkillsSection from '@/sections/SkillsSection.astro'
+import TestimonialsSection from '@/sections/TestimonialsSection.astro'
+import { getSections } from '@/utils/content.js'
+
+const sections = await getSections()
+
+const sectionConfigs: SectionConfig[] = [
+  sections.main?.config,
+  sections.personal?.config,
+  sections.skills?.config,
+  sections.experience?.config,
+  sections.projects?.config,
+  sections.education?.config,
+  sections.testimonials?.config,
+  sections.favorites?.config,
+].filter((config) => config !== undefined)
+---
+
+<Layout title="Martín Acosta Resume">
+  <ThemeToggle />
+  <main
+    class="w-full max-w-5xl space-y-4 px-2 py-3 sm:space-y-6 sm:px-8 sm:py-12 lg:space-y-8 lg:py-20"
+  >
+    {sections.main && <MainSection {...sections.main} />}
+    {sections.personal && <FeedSection {...sections.personal} />}
+    {sections.skills && <SkillsSection {...sections.skills} />}
+    {sections.experience && <ExperienceSection {...sections.experience} />}
+    {sections.projects && <ProjectsSection {...sections.projects} />}
+    {sections.education && <EducationSection {...sections.education} />}
+    {
+      sections.testimonials && (
+        <TestimonialsSection {...sections.testimonials} />
+      )
+    }
+    {sections.favorites && <FeedSection {...sections.favorites} />}
+  </main>
+  <Sidebar sectionConfigs={sectionConfigs} className="sticky top-8 mt-20" />
+  <script src="@/utils/init-tooltip"></script>
+</Layout>
