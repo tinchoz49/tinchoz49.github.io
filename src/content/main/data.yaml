@@ -43,7 +43,7 @@ tags:
   - name: Working on open source projects
 action:
   label: Download CV
-  url: /cv.pdf
+  url: /resume.pdf
   downloadedFileName: CV-Martin-Acosta.pdf
 links:
   - name: GitHub
