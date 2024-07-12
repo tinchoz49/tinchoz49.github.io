@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises'
 
+import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
 import compress from 'astro-compress'
@@ -13,10 +14,12 @@ import generatePDF from './integrations/generate-pdf.js'
 const settings = JSON.parse(await readFile('./src/content/settings/data.json'))
 
 export default defineConfig({
+  site: process.env.SITE,
   integrations: [
     tailwind(),
     icon(),
     generatePDF(),
+    sitemap(),
     robotsTxt(),
     webmanifest({
       name: settings.meta.title,

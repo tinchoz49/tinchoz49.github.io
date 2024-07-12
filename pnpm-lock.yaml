@@ -14,6 +14,9 @@ importers:
       '@astrojs/check':
         specifier: ^0.7.0
         version: 0.7.0(prettier-plugin-astro@0.14.0)(prettier@3.3.2)(typescript@5.5.3)
+      '@astrojs/sitemap':
+        specifier: ^3.1.6
+        version: 3.1.6
       '@astrojs/tailwind':
         specifier: ^5.1.0
         version: 5.1.0(astro@4.11.5(@types/node@20.14.10)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.3))(tailwindcss@3.4.4)
@@ -213,6 +216,9 @@ packages:
   '@astrojs/prism@3.1.0':
     resolution: {integrity: sha512-Z9IYjuXSArkAUx3N6xj6+Bnvx8OdUSHA8YoOgyepp3+zJmtVYJIl/I18GozdJVW1p5u/CNpl3Km7/gwTJK85cw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0}
+
+  '@astrojs/sitemap@3.1.6':
+    resolution: {integrity: sha512-1Qp2NvAzVImqA6y+LubKi1DVhve/hXXgFvB0szxiipzh7BvtuKe4oJJ9dXSqaubaTkt4nMa6dv6RCCAYeB6xaQ==}
 
   '@astrojs/tailwind@5.1.0':
     resolution: {integrity: sha512-BJoCDKuWhU9FT2qYg+fr6Nfb3qP4ShtyjXGHKA/4mHN94z7BGcmauQK23iy+YH5qWvTnhqkd6mQPQ1yTZTe9Ig==}
@@ -942,6 +948,9 @@ packages:
   '@types/nlcst@2.0.3':
     resolution: {integrity: sha512-vSYNSDe6Ix3q+6Z7ri9lyWqgGhJTmzRjZRqyq15N0Z/1/UnVsno9G/N40NBijoYx2seFDIl0+B2mgAb9mezUCA==}
 
+  '@types/node@17.0.45':
+    resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
+
   '@types/node@20.14.10':
     resolution: {integrity: sha512-MdiXf+nDuMvY0gJKxyfZ7/6UFsETO7mGKF54MVD/ekJS6HdFtpZFBgrh6Pseu64XTb2MLyFPlbW6hj8HYRQNOQ==}
 
@@ -950,6 +959,9 @@ packages:
 
   '@types/normalize-package-data@2.4.4':
     resolution: {integrity: sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==}
+
+  '@types/sax@1.2.7':
+    resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
 
   '@types/tar@6.1.13':
     resolution: {integrity: sha512-IznnlmU5f4WcGTh2ltRu/Ijpmk8wiWXfF0VA4s+HPjHZgvFggk1YaIkbo5krX/zUCzWF8N/l4+W/LNxnvAJ8nw==}
@@ -3674,6 +3686,9 @@ packages:
   sass-formatter@0.7.9:
     resolution: {integrity: sha512-CWZ8XiSim+fJVG0cFLStwDvft1VI7uvXdCNJYXhDvowiv+DsbD1nXLiQ4zrE5UBvj5DWZJ93cwN0NX5PMsr1Pw==}
 
+  sax@1.4.1:
+    resolution: {integrity: sha512-+aWOz7yVScEGoKNd4PA10LZ8sk0A/z5+nXQG5giUO5rprX9jgYsTdov9qCchZiPIZezbZH+jRut8nPodFAX4Jg==}
+
   scslre@0.3.0:
     resolution: {integrity: sha512-3A6sD0WYP7+QrjbfNA2FN3FsOaGGFoekCVgTyypy53gPxhbkCIjtO6YWgdrfM+n/8sI8JeXZOIxsHjMTNxQ4nQ==}
     engines: {node: ^14.0.0 || >=16.0.0}
@@ -3753,6 +3768,11 @@ packages:
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
 
+  sitemap@7.1.2:
+    resolution: {integrity: sha512-ARCqzHJ0p4gWt+j7NlU5eDlIO9+Rkr/JhPFZKKQ1l5GCus7rJH4UdrlVAh0xC/gDS/Qir2UMxqYNHtsKr2rpCw==}
+    engines: {node: '>=12.0.0', npm: '>=5.6.0'}
+    hasBin: true
+
   slash@3.0.0:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
@@ -3823,6 +3843,9 @@ packages:
   stop-iteration-iterator@1.0.0:
     resolution: {integrity: sha512-iCGQj+0l0HOdZ2AEeBADlsRC+vsnDsZsbdSiH1yNSjcfKM7fdpCMfqAL/dwF5BLiw/XhRft/Wax6zQbhq2BcjQ==}
     engines: {node: '>= 0.4'}
+
+  stream-replace-string@2.0.0:
+    resolution: {integrity: sha512-TlnjJ1C0QrmxRNrON00JvaFFlNh5TTG00APw23j74ET7gkQpTASi6/L2fuiav8pzK715HXtUeClpBTw2NPSn6w==}
 
   streamx@2.18.0:
     resolution: {integrity: sha512-LLUC1TWdjVdn1weXGcSxyTR3T4+acB6tVGXT95y0nGbca4t4o/ng1wKAGTljm9VicuCVLvRlqFYXYy5GwgM7sQ==}
@@ -4612,6 +4635,12 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
+  '@astrojs/sitemap@3.1.6':
+    dependencies:
+      sitemap: 7.1.2
+      stream-replace-string: 2.0.0
+      zod: 3.23.8
+
   '@astrojs/tailwind@5.1.0(astro@4.11.5(@types/node@20.14.10)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.3))(tailwindcss@3.4.4)':
     dependencies:
       astro: 4.11.5(@types/node@20.14.10)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.3)
@@ -5361,6 +5390,8 @@ snapshots:
     dependencies:
       '@types/unist': 3.0.2
 
+  '@types/node@17.0.45': {}
+
   '@types/node@20.14.10':
     dependencies:
       undici-types: 5.26.5
@@ -5370,6 +5401,10 @@ snapshots:
       undici-types: 5.26.5
 
   '@types/normalize-package-data@2.4.4': {}
+
+  '@types/sax@1.2.7':
+    dependencies:
+      '@types/node': 20.14.10
 
   '@types/tar@6.1.13':
     dependencies:
@@ -8892,6 +8927,8 @@ snapshots:
     dependencies:
       suf-log: 2.5.3
 
+  sax@1.4.1: {}
+
   scslre@0.3.0:
     dependencies:
       '@eslint-community/regexpp': 4.11.0
@@ -9005,6 +9042,13 @@ snapshots:
 
   sisteransi@1.0.5: {}
 
+  sitemap@7.1.2:
+    dependencies:
+      '@types/node': 17.0.45
+      '@types/sax': 1.2.7
+      arg: 5.0.2
+      sax: 1.4.1
+
   slash@3.0.0: {}
 
   slashes@3.0.12: {}
@@ -9071,6 +9115,8 @@ snapshots:
   stop-iteration-iterator@1.0.0:
     dependencies:
       internal-slot: 1.0.7
+
+  stream-replace-string@2.0.0: {}
 
   streamx@2.18.0:
     dependencies:
