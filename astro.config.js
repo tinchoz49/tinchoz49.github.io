@@ -4,6 +4,7 @@ import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
 import compress from 'astro-compress'
 import icon from 'astro-icon'
+import robotsTxt from 'astro-robots-txt'
 import webmanifest from 'astro-webmanifest'
 
 import generatePDF from './integrations/generate-pdf.js'
@@ -16,6 +17,7 @@ export default defineConfig({
     tailwind(),
     icon(),
     generatePDF(),
+    robotsTxt(),
     webmanifest({
       name: settings.meta.title,
       icon: `.${settings.meta.faviconPath}`, // source for favicon & icons
