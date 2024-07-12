@@ -7,5 +7,5 @@ videos:
   title: Talks
   data:
     - image: '@/assets/favorites/microservices.png'
-      title: Building Resilient Frontend Architecture • Monica Lent • GOTO 2019
+      title: Microservices 4 real • JSDay 2017
       url: 'https://youtu.be/FrL8at9qGrQ'
