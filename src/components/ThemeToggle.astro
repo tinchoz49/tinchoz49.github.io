@@ -12,10 +12,20 @@ import Icon from './Icon.astro'
 </button>
 
 <script is:inline>
+  // initial theme setup
+  const systemTheme = (() => {
+    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+      return localStorage.getItem('theme')
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches
+      ? 'dark'
+      : 'light'
+  })()
+
   const themeToggle = document.getElementById('theme-toggle')
 
   const toggleTheme = () => {
-    const theme = localStorage.getItem('theme') ?? 'light'
+    const theme = localStorage.getItem('theme') ?? systemTheme
     const newTheme = theme === 'light' ? 'dark' : 'light'
     const themeMeta = document.getElementsByName('theme-color')
 
@@ -32,23 +42,13 @@ import Icon from './Icon.astro'
 
   themeToggle.addEventListener('click', toggleTheme)
 
-  // initial theme setup
-  const theme = (() => {
-    if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
-      return localStorage.getItem('theme')
-    }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches
-      ? 'dark'
-      : 'light'
-  })()
-
   const themeMeta = document.getElementsByName('theme-color')
 
   if (themeMeta[0]) {
-    themeMeta[0].content = theme === 'dark' ? '#1a202c' : '#ffffff'
+    themeMeta[0].content = systemTheme === 'dark' ? '#1a202c' : '#ffffff'
   }
 
-  if (theme === 'light') {
+  if (systemTheme === 'light') {
     document.documentElement.classList.remove('dark')
   } else {
     document.documentElement.classList.add('dark')
