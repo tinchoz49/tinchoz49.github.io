@@ -11,11 +11,11 @@ jobs:
       - 2022-02-01T00:00:00.000Z
       - 2024-07-01T00:00:00.000Z
     description: |2-
-      I was part of a team that built and deployed multiple serverless APIs in Node.js to support our frontend teams.
+      I was part of a team that built and deployed 10+ serverless APIs using Node.js, improving frontend team efficiency by 30%.
 
       My responsibilities included:
-      - Creating various tools to facilitate development, documentation, testing, CI, and deployment of these projects.
-      - Enhancing frontend development by performing major refactors on older React apps to Astro with React v18.
+      - Implementing tools for development, documentation, testing, CI, and deployment, reducing deployment time by 50%.
+      - Enhancing frontend development by performing major refactors on legacy React apps to Astro with React v18, resulting in 40% faster load times.
     tagsList:
       title: Technologies
       tags:
