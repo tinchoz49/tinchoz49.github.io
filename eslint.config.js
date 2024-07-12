@@ -32,10 +32,12 @@ const config = standard(
         {
           'custom-groups': {
             type: {
+              'alias': '@/*',
               'astro': 'astro:*',
               'node-test': 'node:test',
             },
             value: {
+              'alias': '@/*',
               'astro': 'astro:*',
               'node-test': 'node:test',
             },
@@ -46,7 +48,7 @@ const config = standard(
             ['node-test', 'builtin'],
             'astro',
             'external',
-            'internal',
+            ['alias', 'internal'],
             ['parent-type', 'sibling-type', 'index-type'],
             ['parent', 'sibling', 'index'],
             'object',

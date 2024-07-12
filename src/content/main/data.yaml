@@ -3,7 +3,7 @@ config:
   title: Profile
   slug: profile
   visible: true
-image: '@/assets/profile.jpeg'
+image: '@/assets/profile.png'
 fullName: Martín Acosta
 role: Senior JavaScript Developer
 details:

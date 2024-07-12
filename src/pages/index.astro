@@ -25,25 +25,23 @@ const sectionConfigs: SectionConfig[] = [
   sections.testimonials?.config,
   sections.favorites?.config,
 ].filter((config) => config !== undefined)
+
+const imageSrc = sections.main.image.src
 ---
 
-<Layout>
+<Layout image={imageSrc}>
   <ThemeToggle />
   <main
     class="w-full max-w-5xl space-y-4 px-2 py-3 sm:space-y-6 sm:px-8 sm:py-12 lg:space-y-8 lg:py-20"
   >
-    {sections.main && <MainSection {...sections.main} />}
-    {sections.personal && <FeedSection {...sections.personal} />}
-    {sections.skills && <SkillsSection {...sections.skills} />}
-    {sections.experience && <ExperienceSection {...sections.experience} />}
-    {sections.projects && <ProjectsSection {...sections.projects} />}
-    {sections.education && <EducationSection {...sections.education} />}
-    {
-      sections.testimonials && (
-        <TestimonialsSection {...sections.testimonials} />
-      )
-    }
-    {sections.favorites && <FeedSection {...sections.favorites} />}
+    <MainSection {...sections.main} />
+    <FeedSection {...sections.personal} />
+    <SkillsSection {...sections.skills} />
+    <ExperienceSection {...sections.experience} />
+    <ProjectsSection {...sections.projects} />
+    <EducationSection {...sections.education} />
+    <TestimonialsSection {...sections.testimonials} />
+    <FeedSection {...sections.favorites} />
   </main>
   <Sidebar sectionConfigs={sectionConfigs} className="sticky top-8 mt-20" />
   <script src="@/utils/init-tooltip"></script>

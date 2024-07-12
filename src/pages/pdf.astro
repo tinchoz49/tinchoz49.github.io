@@ -1,4 +1,6 @@
 ---
+import type { Sections } from '@/types/content'
+
 import Fonts from '@/components/Fonts.astro'
 import Footer from '@/components/pdf/Footer.astro'
 import EducationSection from '@/sections/pdf/EducationSection.astro'
@@ -10,6 +12,9 @@ import { getSections, getSettings } from '@/utils/content'
 
 const settings = await getSettings()
 const sections = await getSections()
+
+const isVisible = (sectionName: keyof Sections) =>
+  sections[sectionName].config.visible
 ---
 
 <!doctype html>
@@ -21,27 +26,11 @@ const sections = await getSections()
     <Fonts />
   </head>
   <body class="flex flex-col bg-white p-[10mm] print:p-0">
-    {sections?.main?.config?.visible && <MainSection {...sections.main} />}
-    {
-      sections?.skills?.config?.visible && (
-        <SkillsSection {...sections.skills} />
-      )
-    }
-    {
-      sections?.experience?.config?.visible && (
-        <ExperienceSection {...sections.experience} />
-      )
-    }
-    {
-      sections?.projects?.config?.visible && (
-        <ProjectsSection {...sections.projects} />
-      )
-    }
-    {
-      sections?.education?.config?.visible && (
-        <EducationSection {...sections.education} />
-      )
-    }
+    {isVisible('main') && <MainSection {...sections.main} />}
+    {isVisible('skills') && <SkillsSection {...sections.skills} />}
+    {isVisible('experience') && <ExperienceSection {...sections.experience} />}
+    {isVisible('projects') && <ProjectsSection {...sections.projects} />}
+    {isVisible('education') && <EducationSection {...sections.education} />}
     {settings.pdf?.footer && <Footer>{settings.pdf.footer}</Footer>}
   </body>
 </html>

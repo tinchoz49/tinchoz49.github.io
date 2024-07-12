@@ -1,16 +1,14 @@
 ---
-import { getImage } from 'astro:assets'
-
-import profileImage from '@/assets/profile.jpeg'
 import { getSettings } from '@/utils/content'
 import { SEO } from 'astro-seo'
 
 const settings = await getSettings()
 
-const profileImageOptimized = await getImage({
-  src: profileImage,
-  format: 'webp',
-})
+interface Props {
+  image: string
+}
+
+const { image } = Astro.props
 ---
 
 <!doctype html>
@@ -26,7 +24,7 @@ const profileImageOptimized = await getImage({
         basic: {
           title: settings.meta.title,
           type: 'summary',
-          image: profileImageOptimized.src,
+          image,
         },
       }}
       twitter={{

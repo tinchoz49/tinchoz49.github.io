@@ -95,6 +95,11 @@ export const PdfConfigSchema = z.object({
   footer: z.string().optional(),
 })
 
+export const TagsListSchema = z.object({
+  title: z.string(),
+  tags: z.array(z.preprocess(lookupTypes, TagSchema)),
+})
+
 export const collections = {
   main: defineCollection({
     type: 'data',
@@ -125,10 +130,7 @@ export const collections = {
         image: image().optional().nullable(),
         dates: DateRangeSchema,
         description: z.string(),
-        tagsList: z.object({
-          title: z.string(),
-          tags: z.array(z.preprocess(lookupTypes, TagSchema)),
-        }),
+        tagsList: TagsListSchema,
         links: z.array(LinkButtonSchema),
       })),
     }),
@@ -161,10 +163,7 @@ export const collections = {
           image: image(),
           alt: z.string(),
         })).optional(),
-        tagsList: z.object({
-          title: z.string(),
-          tags: z.array(z.preprocess(lookupTypes, TagSchema)),
-        }),
+        tagsList: TagsListSchema,
         links: z.array(LinkButtonSchema),
       })),
     }),

@@ -12,7 +12,7 @@
   "meta": {
     "title": "Hey there, I'm Martín Acosta.",
     "description": "I'm a Senior JavaScript Developer looking for the next challenge.",
-    "faviconPath": "/src/assets/profile.jpeg"
+    "faviconPath": "/src/assets/profile.png"
   },
   "pdf": {
     "footer": "I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process."
