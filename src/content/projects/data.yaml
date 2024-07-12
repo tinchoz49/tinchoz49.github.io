@@ -73,7 +73,6 @@ projects:
           - Node Libraries
           - Node Tools
     pdfDetails: []
-    screenshots: []
     description: >-
       For a long time, I've been contributing to the open-source ecosystem with many projects of my own authorship, such as:
         - [discovery-swarm-webrtc:](https://github.com/geut/discovery-swarm-webrtc) A WebRTC-based discovery swarm.
@@ -95,4 +94,6 @@ projects:
         - type: webrtc
         - type: openapi
         - type: astro
-    links: []
+    links:
+      - type: github
+        url: https://github.com/tinchoz49
