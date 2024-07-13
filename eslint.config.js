@@ -32,12 +32,10 @@ const config = standard(
         {
           'custom-groups': {
             type: {
-              'alias': '@/*',
               'astro': 'astro:*',
               'node-test': 'node:test',
             },
             value: {
-              'alias': '@/*',
               'astro': 'astro:*',
               'node-test': 'node:test',
             },
@@ -54,6 +52,7 @@ const config = standard(
             'object',
             'unknown',
           ],
+          'internal-pattern': ['@/**'],
           'order': 'asc',
           'type': 'natural',
         },

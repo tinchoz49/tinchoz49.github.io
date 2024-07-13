@@ -1,6 +1,8 @@
 ---
 import type { Project, ProjectsSection } from '@/types/content'
 
+import { nanoid } from 'nanoid'
+
 import Description from '@/components/Description.astro'
 import LabelledValue from '@/components/LabelledValue.astro'
 import LinkButton from '@/components/LinkButton.astro'
@@ -9,7 +11,6 @@ import TagsList from '@/components/TagsList.astro'
 import Thumbnail from '@/components/Thumbnail.astro'
 import Timestamp from '@/components/Timestamp.astro'
 import Typography from '@/components/Typography.astro'
-import { nanoid } from 'nanoid'
 
 export interface Props extends Project {
   screenshotsConfig?: ProjectsSection['config']['screenshots']
