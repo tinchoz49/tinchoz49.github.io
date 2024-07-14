@@ -19,7 +19,9 @@ export default defineConfig({
     tailwind(),
     icon(),
     generatePDF(),
-    sitemap(),
+    sitemap({
+      filter: page => !page.endsWith('/pdf/'),
+    }),
     robotsTxt(),
     webmanifest({
       name: settings.meta.title,
