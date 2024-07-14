@@ -286,3 +286,10 @@ export const vite: Skill = {
   iconColor: '#646CFF',
   url: 'https://vitejs.dev/',
 }
+
+export const golang: Skill = {
+  name: 'Go',
+  icon: 'simple-icons:go',
+  iconColor: '#00ADD8',
+  url: 'https://go.dev/',
+}

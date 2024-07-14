@@ -68,6 +68,7 @@ skillSets:
     skills:
       - type: zig
       - type: rust
+      - type: golang
   - title: I speak
     skills:
       - icon: 'circle-flags:es-variant'
