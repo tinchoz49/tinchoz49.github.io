@@ -1,7 +1,8 @@
 ---
 import type { Sections } from '@/types/content'
 
-import Fonts from '@/components/Fonts.astro'
+import '@fontsource-variable/inter'
+
 import Footer from '@/components/pdf/Footer.astro'
 import EducationSection from '@/sections/pdf/EducationSection.astro'
 import ExperienceSection from '@/sections/pdf/ExperienceSection.astro'
@@ -23,7 +24,6 @@ const isVisible = (sectionName: keyof Sections) =>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <title>PDF preview</title>
-    <Fonts />
   </head>
   <body class="flex flex-col bg-white p-[10mm] print:p-0">
     {isVisible('main') && <MainSection {...sections.main} />}

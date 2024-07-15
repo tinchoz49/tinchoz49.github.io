@@ -1,5 +1,6 @@
 import { readFile } from 'node:fs/promises'
 
+import react from '@astrojs/react'
 import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
@@ -17,6 +18,7 @@ export default defineConfig({
   site: process.env.SITE,
   integrations: [
     tailwind(),
+    react(),
     icon(),
     generatePDF(),
     sitemap({

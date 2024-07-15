@@ -27,7 +27,7 @@ export default {
         show: 'show 225ms ease-in-out',
       },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Inter Variable', ...defaultTheme.fontFamily.sans],
       },
     },
   },

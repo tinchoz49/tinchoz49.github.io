@@ -16,14 +16,14 @@ import { getSections } from '@/utils/content.js'
 const sections = await getSections()
 
 const sectionConfigs: SectionConfig[] = [
-  sections.main?.config,
-  sections.personal?.config,
-  sections.skills?.config,
-  sections.experience?.config,
-  sections.projects?.config,
-  sections.education?.config,
-  sections.testimonials?.config,
-  sections.favorites?.config,
+  sections.main.config,
+  sections.personal.config,
+  sections.skills.config,
+  sections.experience.config,
+  sections.projects.config,
+  sections.education.config,
+  sections.testimonials.config,
+  sections.favorites.config,
 ].filter((config) => config !== undefined)
 ---
 
