@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro'
 
-import { getImage } from 'astro:assets'
+import { readFile } from 'node:fs/promises'
+
 import { getEntry } from 'astro:content'
 
 import OG from '@/components/OG'
@@ -10,13 +11,13 @@ import { PNG } from '@/utils/create-image'
 const settings = await getSettings()
 const { data: main } = await getEntry('main', 'data')
 
-const image = await getImage({ src: main.image, format: 'png' })
+const imageData = await readFile((main.image as unknown as { fsPath: string }).fsPath, 'base64')
 
-export const GET: APIRoute = async function get({ url }) {
+export const GET: APIRoute = async function get() {
   const png = await PNG(OG(settings.meta.title, {
-    width: image.attributes.width,
-    height: image.attributes.height,
-    src: new URL(image.src, url).href,
+    width: main.image.width,
+    height: main.image.height,
+    src: `data:image/png;base64,${imageData}`,
   }), 1200, 630)
 
   return new Response(png, {
