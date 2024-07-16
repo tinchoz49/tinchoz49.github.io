@@ -75,9 +75,9 @@ export const MetaConfigSchema = z.object({
   title: z.string(),
   description: z.string(),
   faviconPath: z.string(),
+  ogImage: z.string(),
   ogTitle: z.string().optional(),
   ogDescription: z.string().optional(),
-  ogImage: z.string().optional(),
 })
 
 export const I18nConfigSchema = z.object({
