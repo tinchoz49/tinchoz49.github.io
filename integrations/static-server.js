@@ -12,6 +12,12 @@ export default function () {
         devServer = await dev({
           root: '.',
           logLevel: 'silent',
+          vite: {
+            server: {
+              ws: false,
+              hmr: false,
+            },
+          },
         })
       },
       'astro:build:done': () => devServer.stop(),
