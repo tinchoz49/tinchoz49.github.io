@@ -5,6 +5,7 @@ import sitemap from '@astrojs/sitemap'
 import tailwind from '@astrojs/tailwind'
 import { defineConfig } from 'astro/config'
 import compress from 'astro-compress'
+import compressor from 'astro-compressor'
 import icon from 'astro-icon'
 import robotsTxt from 'astro-robots-txt'
 import webmanifest from 'astro-webmanifest'
@@ -36,6 +37,7 @@ export default defineConfig({
       display: 'standalone',
     }),
     compress(),
+    compressor(),
   ],
   devToolbar: {
     enabled: false,
