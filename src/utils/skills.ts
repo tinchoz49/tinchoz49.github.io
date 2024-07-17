@@ -288,7 +288,7 @@ export const vite: Skill = {
 }
 
 export const golang: Skill = {
-  name: 'Go',
+  name: 'Golang',
   icon: 'simple-icons:go',
   iconColor: '#00ADD8',
   url: 'https://go.dev/',
