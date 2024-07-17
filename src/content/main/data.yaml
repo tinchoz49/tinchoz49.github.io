@@ -23,13 +23,13 @@ pdfDetails:
     value: 'Playa Union, Chubut, Argentina'
   - label: LinkedIn
     value: /in/martin-g-acosta
-    url: 'https://linkedin.com'
+    url: 'https://linkedin.com/in/martin-g-acosta'
   - label: GitHub
-    value: /tinchoz49
-    url: 'https://github.com'
+    value: tinchoz49
+    url: 'https://github.com/tinchoz49'
   - label: Website
     value: martin-acosta.dev
-    url: /
+    url: 'https://martin-acosta.dev'
 description: >-
   I'm Martín Acosta, a software developer deeply invested in advancing decentralized systems and web technologies.
 
