@@ -10,7 +10,6 @@ import robotsTxt from 'astro-robots-txt'
 import webmanifest from 'astro-webmanifest'
 
 import generatePDF from './integrations/generate-pdf.js'
-import staticServer from './integrations/static-server.js'
 
 /** @type {import('./src/types/content').Settings} */
 const settings = JSON.parse(await readFile('./src/content/settings/data.json'))
@@ -18,7 +17,6 @@ const settings = JSON.parse(await readFile('./src/content/settings/data.json'))
 export default defineConfig({
   site: process.env.SITE,
   integrations: [
-    staticServer(),
     tailwind(),
     react(),
     icon(),
