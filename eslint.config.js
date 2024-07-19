@@ -21,42 +21,9 @@ const config = standard(
     ],
   },
   {
-    languageOptions: {
-      globals: {
-        NodeJS: true,
-      },
-    },
+    files: ['**/*.astro', '**/*.ts', '**/*.tsx'],
     rules: {
-      'perfectionist/sort-imports': [
-        'error',
-        {
-          'custom-groups': {
-            type: {
-              'astro': 'astro:*',
-              'node-test': 'node:test',
-            },
-            value: {
-              'astro': 'astro:*',
-              'node-test': 'node:test',
-            },
-          },
-          'groups': [
-            'type',
-            'internal-type',
-            ['node-test', 'builtin'],
-            'astro',
-            'external',
-            ['alias', 'internal'],
-            ['parent-type', 'sibling-type', 'index-type'],
-            ['parent', 'sibling', 'index'],
-            'object',
-            'unknown',
-          ],
-          'internal-pattern': ['@/**'],
-          'order': 'asc',
-          'type': 'natural',
-        },
-      ],
+      'no-undef': 'off',
       'tailwindcss/no-custom-classname': 'off',
       'ts/explicit-function-return-type': 'off',
     },
