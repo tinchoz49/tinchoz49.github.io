@@ -12,13 +12,9 @@ details:
     url: 'mailto:martin@geutstudio.com'
   - label: From
     value: 'Playa Union, Chubut, Argentina'
-  - label: Salary range
-    value: 75k - 90k (USD)
 pdfDetails:
   - label: Email
     value: martin@geutstudio.com
-  - label: Salary range
-    value: 75k - 90k (USD)
   - label: From
     value: 'Playa Union, Chubut, Argentina'
   - label: LinkedIn
