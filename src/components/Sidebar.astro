@@ -20,8 +20,8 @@ const { className, sectionConfigs } = Astro.props
 >
   {
     sectionConfigs
-      .filter((config) => config.visible)
-      .map((config) => <SidebarItem {...config} />)
+      .filter(config => config.visible)
+      .map(config => <SidebarItem {...config} />)
   }
 </nav>
 
@@ -34,7 +34,7 @@ const { className, sectionConfigs } = Astro.props
   ] as HTMLAnchorElement[]
 
   const setActiveItem = (hash: string) => {
-    sidebarItems.forEach((item) => {
+    sidebarItems.forEach(item => {
       if (item.href.endsWith(hash)) {
         item.setAttribute('aria-current', 'page')
       } else {

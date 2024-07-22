@@ -12,7 +12,7 @@ const { config, skillSets } = Astro.props
   <SectionHeading>{config.title}</SectionHeading>
   <div class="flex flex-col gap-5">
     {
-      skillSets.map((skillSet) => (
+      skillSets.map(skillSet => (
         <div>
           <div class="text-base font-extrabold text-gray-900">
             {skillSet.title}

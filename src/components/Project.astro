@@ -48,7 +48,7 @@ const screenshotsTooltip = screenshotsConfig?.title || 'Screenshots'
               <Timestamp dates={dates} />
             </div>
             <div class="flex gap-2">
-              {links.map((link) => <LinkButton {...link} />)}
+              {links.map(link => <LinkButton {...link} />)}
               {
                 hasScreenshots && (
                   <LinkButton
@@ -63,7 +63,7 @@ const screenshotsTooltip = screenshotsConfig?.title || 'Screenshots'
           </div>
         </div>
         <div class="inline-grid w-full xl:grid-cols-[auto_auto]">
-          {details.map((detail) => <LabelledValue {...detail} />)}
+          {details.map(detail => <LabelledValue {...detail} />)}
         </div>
       </div>
     </div>
@@ -72,7 +72,7 @@ const screenshotsTooltip = screenshotsConfig?.title || 'Screenshots'
   <TagsList {...tagsList} />
   <div class="hidden" id={galleryId}>
     {
-      screenshots?.map((screenshot) => (
+      screenshots?.map(screenshot => (
         <Photo src={screenshot.image} alt={screenshot.alt} />
       ))
     }
@@ -95,7 +95,7 @@ const screenshotsTooltip = screenshotsConfig?.title || 'Screenshots'
       const galleryId = String(button.dataset.gallery)
       const galleryWrapper = document.getElementById(galleryId) as HTMLElement
       const screenshots = [...galleryWrapper.children] as HTMLImageElement[]
-      const dataSource: DataSource = screenshots.map((img) => ({
+      const dataSource: DataSource = screenshots.map(img => ({
         src: img.src,
         width: img.width,
         height: img.height,
@@ -106,7 +106,7 @@ const screenshotsTooltip = screenshotsConfig?.title || 'Screenshots'
     }
 
     import('photoswipe').then(({ default: PhotoSwipe }) => {
-      buttons.forEach((button) =>
+      buttons.forEach(button =>
         button.addEventListener('click', () => {
           new PhotoSwipe(getOptionsForButton(button)).init()
         }),

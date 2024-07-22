@@ -31,7 +31,7 @@ const { title, institution, dates, description, links, image } = Astro.props
     {
       links.length > 0 && (
         <div class="flex flex-wrap gap-3 sm:flex-nowrap">
-          {links.map((link) => (
+          {links.map(link => (
             <LinkButton {...link} />
           ))}
         </div>

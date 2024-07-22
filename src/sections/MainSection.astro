@@ -46,7 +46,7 @@ const {
         {
           links.length > 0 && (
             <div class="flex flex-wrap gap-3 sm:flex-nowrap">
-              {links.map((link) => (
+              {links.map(link => (
                 <LinkButton {...link} />
               ))}
             </div>
@@ -55,7 +55,7 @@ const {
       </div>
       <div class="flex flex-col gap-6">
         <div class="inline-grid xl:grid-cols-[auto_auto]">
-          {details.map((detail) => <LabelledValue {...detail} />)}
+          {details.map(detail => <LabelledValue {...detail} />)}
         </div>
         <div class="flex flex-col gap-4">
           <Description content={description} />

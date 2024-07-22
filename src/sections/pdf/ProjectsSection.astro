@@ -25,7 +25,7 @@ const { config, projects } = Astro.props
                 <ListItemHeading title={name} dates={dates} />
                 <Description content={description} />
                 <div class="flex flex-col gap-1">
-                  {(pdfDetails ?? details).map((detail) => (
+                  {(pdfDetails ?? details).map(detail => (
                     <LabelledValue {...detail} />
                   ))}
                 </div>

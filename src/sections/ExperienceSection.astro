@@ -13,6 +13,6 @@ const { config, jobs } = Astro.props
 
 <SectionCard {...config}>
   <DividedList>
-    {jobs.flatMap((job) => [<Job {...job} />, <Divider />])}
+    {jobs.flatMap(job => [<Job {...job} />, <Divider />])}
   </DividedList>
 </SectionCard>

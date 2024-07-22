@@ -16,16 +16,16 @@ const { config, books, medias, people, videos } = Astro.props
 <SectionCard {...config}>
   <div class="flex flex-col gap-16">
     <FeedSubSection minTileWidth={160} subSection={books}>
-      {books?.data.map((book) => <BookTile {...book} />)}
+      {books?.data.map(book => <BookTile {...book} />)}
     </FeedSubSection>
     <FeedSubSection minTileWidth={120} subSection={people}>
-      {people?.data.map((person) => <PersonTile {...person} />)}
+      {people?.data.map(person => <PersonTile {...person} />)}
     </FeedSubSection>
     <FeedSubSection minTileWidth={204} subSection={videos}>
-      {videos?.data.map((video) => <VideoTile {...video} />)}
+      {videos?.data.map(video => <VideoTile {...video} />)}
     </FeedSubSection>
     <FeedSubSection minTileWidth={120} subSection={medias}>
-      {medias?.data.map((media) => <MediaTile {...media} />)}
+      {medias?.data.map(media => <MediaTile {...media} />)}
     </FeedSubSection>
   </div>
 </SectionCard>

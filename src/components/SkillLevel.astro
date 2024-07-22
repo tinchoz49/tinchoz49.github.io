@@ -14,7 +14,7 @@ const levels = [1, 2, 3, 4, 5] as const
 
 <div class="flex gap-1">
   {
-    levels.map((tileLevel) => (
+    levels.map(tileLevel => (
       <SkillLevelTile tileLevel={tileLevel} skillLevel={skillLevel} />
     ))
   }

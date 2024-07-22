@@ -23,7 +23,7 @@ const { author, content, image, links, relation } = Astro.props
     {
       links.length > 0 && (
         <div class="flex gap-3">
-          {links.map((link) => (
+          {links.map(link => (
             <LinkButton {...link} />
           ))}
         </div>
