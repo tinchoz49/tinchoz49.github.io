@@ -1,17 +1,13 @@
 ---
-import type { ImageMetadata } from 'astro'
-
 import { SEO } from 'astro-seo'
 
 import { getSettings } from '@/utils/content'
 
 const settings = await getSettings()
 
-interface Props {
-  image: ImageMetadata
-}
+const { site, url } = Astro
 
-const { url } = Astro
+const image = new URL('/og.png', site || url).href
 ---
 
 <!doctype html>
@@ -28,12 +24,13 @@ const { url } = Astro
         basic: {
           title: settings.meta.title,
           type: 'summary',
-          image: new URL('/og.png', url).href,
+          image,
           url,
         },
       }}
       twitter={{
         creator: '@tinchoz49',
+        image,
       }}
     />
   </head>
