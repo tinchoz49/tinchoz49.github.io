@@ -23,14 +23,21 @@ const image = new URL('/og.png', site || url).href
       openGraph={{
         basic: {
           title: settings.meta.title,
-          type: 'summary',
+          type: 'website',
           image,
           url,
+        },
+        image: {
+          width: 1200,
+          height: 630,
         },
       }}
       twitter={{
         creator: '@tinchoz49',
         image,
+        card: 'summary_large_image',
+        title: settings.meta.title,
+        description: settings.meta.description,
       }}
     />
   </head>
