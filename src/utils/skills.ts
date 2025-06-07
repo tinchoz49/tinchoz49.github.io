@@ -1,5 +1,11 @@
 import type { Skill } from '../types/content'
 
+export const javascript: Skill = {
+  name: 'JavaScript',
+  icon: 'simple-icons:javascript',
+  iconColor: '#F7DF1E',
+}
+
 export const node: Skill = {
   name: 'Node.js',
   icon: 'simple-icons:nodedotjs',

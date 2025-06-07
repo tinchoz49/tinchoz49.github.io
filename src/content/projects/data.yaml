@@ -39,6 +39,7 @@ projects:
       Sher is a decentralized live audio platform developed by GEUT. It aims to revolutionize how live audio content is created, shared, and consumed by leveraging peer-to-peer (P2P) technologies. The platform offers a decentralized approach, meaning it operates without a central server, enhancing privacy, security, and resilience.<br/>
 
       Key features of Sher include:
+        - Built on top of JavaScript/TypeScript and Node.js.
         - **Decentralized Infrastructure:** By utilizing P2P networks, SHER.app ensures that audio content is distributed directly between users, reducing dependency on centralized servers and increasing the platform's robustness.
         - **Live Audio Streaming:** SHER.app allows users to broadcast live audio sessions, making it suitable for various applications, including podcasts, live shows, and real-time discussions.
         - **Community Focus:** The platform is designed to foster a community-driven environment where users can connect, share, and interact with each other in real time.
@@ -49,6 +50,8 @@ projects:
     tagsList:
       title: Technologies
       tags:
+        - type: javascript
+        - type: typescript
         - type: node
         - type: eslint
         - type: react
@@ -69,12 +72,14 @@ projects:
       - label: Category
         value:
           - Open Source Projects
+          - JavaScript
+          - TypeScript
           - NPM
           - Node Libraries
           - Node Tools
     pdfDetails: []
     description: >-
-      For a long time, I've been contributing to the open-source ecosystem with many projects of my own authorship, such as:
+      For a long time, I've been contributing to the JavaScript/TypeScript open-source ecosystem with many projects of my own authorship, such as:
         - [discovery-swarm-webrtc:](https://github.com/geut/discovery-swarm-webrtc) A WebRTC-based discovery swarm.
         - [fastify-uws:](https://github.com/geut/fastify-uws) Integrating uWebSocket.js with Fastify.
         - [jsdast:](https://github.com/geut/jsdast) A JSDoc Abstract Syntax Tree.
@@ -86,6 +91,8 @@ projects:
     tagsList:
       title: Technologies
       tags:
+        - type: javascript
+        - type: typescript
         - type: node
         - type: eslint
         - type: react

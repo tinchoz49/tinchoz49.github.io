@@ -6,7 +6,13 @@ config:
 skillSets:
   - title: I have experience with
     skills:
+      - type: javascript
+        level: 5
+      - type: typescript
+        level: 5
       - type: node
+        level: 5
+      - type: bun
         level: 5
       - type: astro
         level: 5
@@ -24,8 +30,6 @@ skillSets:
         level: 5
       - type: fastify
         level: 5
-      - type: bun
-        level: 5
       - type: vite
         level: 5
       - type: moleculer
@@ -34,8 +38,6 @@ skillSets:
         level: 5
       - type: githubActions
         level: 5
-      - type: typescript
-        level: 4
       - type: serverless
         level: 4
       - type: webrtc
