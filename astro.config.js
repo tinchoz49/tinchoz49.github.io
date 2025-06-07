@@ -24,6 +24,7 @@ export default defineConfig({
     generatePDF(),
     sitemap({
       filter: page => !page.endsWith('/pdf/'),
+      lastmod: new Date(),
     }),
     robotsTxt(),
     webmanifest({
