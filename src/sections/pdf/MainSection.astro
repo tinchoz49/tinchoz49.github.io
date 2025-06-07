@@ -4,10 +4,20 @@ import type { MainSection } from '@/types/content'
 import Photo from '@/components/Photo.astro'
 import Description from '@/components/pdf/Description.astro'
 import LabelledValue from '@/components/pdf/LabelledValue.astro'
+import TagsList from '@/components/pdf/TagsList.astro'
 
 export interface Props extends MainSection {}
 
-const { image, fullName, role, details, pdfDetails, description } = Astro.props
+const {
+  image,
+  fullName,
+  role,
+  details,
+  pdfDetails,
+  description,
+  languages,
+  tags,
+} = Astro.props
 ---
 
 <div class="flex flex-col gap-4">
@@ -33,4 +43,6 @@ const { image, fullName, role, details, pdfDetails, description } = Astro.props
     </div>
   </div>
   <Description content={description} />
+  <TagsList title="I speak" tags={languages} />
+  <TagsList title="I'm available for" tags={tags} />
 </div>
