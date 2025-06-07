@@ -69,9 +69,3 @@ skillSets:
       - type: zig
       - type: rust
       - type: golang
-  - title: I speak
-    skills:
-      - icon: 'circle-flags:es-variant'
-        name: Spanish - native
-      - icon: 'circle-flags:us'
-        name: English - B1

@@ -30,16 +30,20 @@ description: >-
   I'm Martín Acosta, a software developer deeply invested in advancing decentralized systems and web technologies.
 
   <br/>
-  I focus on leveraging JavaScript and Node.js to build innovative, efficient, and scalable solutions.
+  I focus on leveraging JavaScript/TypeScript to build innovative, efficient, and scalable solutions on top of Node.js or Bun.
 
   <br/>
   I actively contribute to the open-source community, particularly in JavaScript and Node.js, with significant work on libraries for WebRTC, Fastify, JSDoc, and state management.
   I also engaged with the developer community to discuss the latest trends and best practices in software development.
+languages:
+  - icon: 'circle-flags:es-variant'
+    name: Spanish - native
+  - icon: 'circle-flags:us'
+    name: English - B2
 tags:
-  - name: Open for full-time work
-  - name: Available for mentoring
-  - name: Available to support Node.js development teams
-  - name: Working on open source projects
+  - name: Full-time work
+  - name: Mentoring
+  - name: Support JavaScript/TypeScript development teams
 action:
   label: Download CV
   url: /resume.pdf

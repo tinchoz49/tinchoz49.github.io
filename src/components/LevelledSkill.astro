@@ -16,7 +16,11 @@ const IconWrapper = url ? 'a' : 'div'
   <div class="flex h-5 items-center justify-between">
     <IconWrapper
       class="flex h-5 gap-2"
-      {...url && { href: url, target: '_blank', rel: 'noopener noreferrer' }}
+      {...url && {
+        href: url,
+        target: '_blank',
+        rel: 'noopener noreferrer nofollow',
+      }}
     >
       {icon && <Icon name={icon} color={iconColor} size={20} />}
       <Typography variant="skill">{name}</Typography>

@@ -113,6 +113,7 @@ export const collections = {
       tags: z.array(z.preprocess(lookupTypes, TagSchema)),
       action: DownloadButtonSchema,
       links: z.array(LinkButtonSchema),
+      languages: z.array(z.preprocess(lookupTypes, TagSchema)),
     }),
   }),
   skills: defineCollection({
