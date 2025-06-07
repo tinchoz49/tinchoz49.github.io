@@ -28,8 +28,8 @@ export async function SVG(component: JSX.Element, width: number, height: number)
   })
 }
 
-export async function PNG(component: JSX.Element, width: number, height: number) {
+export async function toWebp(component: JSX.Element, width: number, height: number) {
   return await sharp(Buffer.from(await SVG(component, width, height)))
-    .png()
+    .webp()
     .toBuffer()
 }
