@@ -17,12 +17,12 @@ const sections = await getSections()
 
 const sectionConfigs: SectionConfig[] = [
   sections.main.config,
-  sections.personal.config,
-  sections.skills.config,
   sections.experience.config,
-  sections.projects.config,
   sections.education.config,
+  sections.projects.config,
+  sections.skills.config,
   sections.testimonials.config,
+  sections.personal.config,
   sections.favorites.config,
 ].filter(config => config !== undefined)
 ---
@@ -33,12 +33,12 @@ const sectionConfigs: SectionConfig[] = [
     class="w-full max-w-5xl space-y-4 px-2 py-3 sm:space-y-6 sm:px-8 sm:py-12 lg:space-y-8 lg:py-20"
   >
     <MainSection {...sections.main} />
-    <FeedSection {...sections.personal} />
-    <SkillsSection {...sections.skills} />
     <ExperienceSection {...sections.experience} />
-    <ProjectsSection {...sections.projects} />
     <EducationSection {...sections.education} />
+    <ProjectsSection {...sections.projects} />
+    <SkillsSection {...sections.skills} />
     <TestimonialsSection {...sections.testimonials} />
+    <FeedSection {...sections.personal} />
     <FeedSection {...sections.favorites} />
   </main>
   <Sidebar sectionConfigs={sectionConfigs} className="sticky top-8 mt-20" />

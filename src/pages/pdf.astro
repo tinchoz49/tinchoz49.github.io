@@ -27,10 +27,10 @@ const isVisible = (sectionName: keyof Sections) =>
   </head>
   <body class="flex flex-col bg-white p-[10mm] print:p-0">
     {isVisible('main') && <MainSection {...sections.main} />}
-    {isVisible('skills') && <SkillsSection {...sections.skills} />}
     {isVisible('experience') && <ExperienceSection {...sections.experience} />}
-    {isVisible('projects') && <ProjectsSection {...sections.projects} />}
     {isVisible('education') && <EducationSection {...sections.education} />}
+    {isVisible('projects') && <ProjectsSection {...sections.projects} />}
+    {isVisible('skills') && <SkillsSection {...sections.skills} />}
     {settings.pdf?.footer && <Footer>{settings.pdf.footer}</Footer>}
   </body>
 </html>
