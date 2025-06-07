@@ -5,14 +5,14 @@ interface Options {
 }
 
 export default function OG(options: Options) {
-  const { description, image } = options
+  const { title, description, image } = options
 
   return (
-    <div tw="flex size-full bg-gray-50 p-20 flex-col items-center justify-center bg-white" style={{ width: 1200, height: 630 }}>
+    <div tw="flex bg-gray-50 p-20 flex-col items-center justify-center bg-white" style={{ width: 1200, height: 630 }}>
       <div tw="flex w-full h-full">
         <div tw="flex w-full justify-center p-8 px-4 py-12 md:items-center">
           <h2 tw="flex-2 flex flex-col text-left text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl leading-normal">
-            <span>Hey there, I'm Martín Acosta:</span>
+            <span>{title}</span>
             <span tw="text-indigo-600">{description}</span>
           </h2>
           <div tw="ml-8 mt-0 flex flex-1">

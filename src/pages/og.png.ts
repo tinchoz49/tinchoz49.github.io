@@ -13,7 +13,7 @@ const imageData = await readFile(path.join(process.cwd(), settings.meta.ogImage)
 
 export const GET: APIRoute = async function get() {
   const png = await PNG(OG({
-    title: settings.meta.title,
+    title: settings.meta.ogImageTitle ?? settings.meta.title,
     description: settings.meta.description,
     image: `data:image/png;base64,${imageData}`,
   }), 1200, 630)

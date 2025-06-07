@@ -76,6 +76,7 @@ export const MetaConfigSchema = z.object({
   description: z.string(),
   faviconPath: z.string(),
   ogImage: z.string(),
+  ogImageTitle: z.string().optional(),
   ogTitle: z.string().optional(),
   ogDescription: z.string().optional(),
 })
@@ -141,6 +142,12 @@ export const collections = {
     schema: z.object({
       meta: MetaConfigSchema,
       i18n: I18nConfigSchema,
+      schema: z.object({
+        name: z.string(),
+        jobTitle: z.string(),
+        knowsAbout: z.array(z.string()),
+        image: z.string(),
+      }),
       pdf: PdfConfigSchema.optional(),
     }),
   }),

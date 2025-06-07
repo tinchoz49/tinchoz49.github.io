@@ -13,9 +13,16 @@
     "title": "Hey there, I'm Martín Acosta, a Senior JavaScript Developer",
     "description": "Senior JavaScript Developer with expertise in React, Node.js, and TypeScript, eager to create innovative and impactful applications.",
     "faviconPath": "/src/assets/profile-circle.png",
-    "ogImage": "/src/assets/profile-circle.png"
+    "ogImage": "/src/assets/profile-circle.png",
+    "ogImageTitle": "Hey there, I'm Martín Acosta:"
   },
   "pdf": {
     "footer": "I hereby give consent for my personal data included in my application to be processed for the purposes of the recruitment process."
+  },
+  "schema": {
+    "name": "Martín Acosta",
+    "jobTitle": "Senior JavaScript Developer",
+    "knowsAbout": ["JavaScript", "TypeScript", "React", "Node.js", "Web Development"],
+    "image": "/images/profile.png"
   }
 }

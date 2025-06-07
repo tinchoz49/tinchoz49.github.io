@@ -1,5 +1,6 @@
 ---
 import { SEO } from 'astro-seo'
+import { Schema } from 'astro-seo-schema'
 
 import { getSettings } from '@/utils/content'
 
@@ -38,6 +39,17 @@ const image = new URL('/og.png', site || url).href
         card: 'summary_large_image',
         title: settings.meta.title,
         description: settings.meta.description,
+      }}
+    />
+    <Schema
+      item={{
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        'name': settings.schema.name,
+        'jobTitle': settings.schema.jobTitle,
+        'knowsAbout': settings.schema.knowsAbout,
+        'url': url.toString(),
+        'image': new URL(settings.schema.image, url.toString()).toString(),
       }}
     />
   </head>
