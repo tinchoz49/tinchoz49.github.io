@@ -5,7 +5,7 @@ config:
   visible: true
 image: '@/assets/profile.png'
 fullName: Martín Acosta
-role: Senior JavaScript Developer
+role: Senior JavaScript/TypeScript Developer
 details:
   - label: Email
     value: martin@geutstudio.com
