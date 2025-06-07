@@ -31,6 +31,10 @@ const image = new URL('/og.png', site || url).href
         image: {
           width: 1200,
           height: 630,
+          alt: `Presentation image of ${settings.schema.name}`,
+        },
+        optional: {
+          description: settings.meta.description,
         },
       }}
       twitter={{
