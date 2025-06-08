@@ -27,14 +27,13 @@ pdfDetails:
     value: martin-acosta.dev
     url: 'https://martin-acosta.dev'
 description: >-
-  I'm Martín Acosta, a software developer deeply invested in advancing decentralized systems and web technologies.
-
+  I'm Martín Acosta, a JavaScript/TypeScript developer with over 15 years of experience, deeply invested in advancing decentralized systems and web technologies.
   <br/>
-  I focus on leveraging JavaScript/TypeScript to build innovative, efficient, and scalable solutions on top of Node.js or Bun.
 
+  I specialize in leveraging JavaScript/TypeScript to build innovative, efficient, and scalable solutions on top of Node.js or Bun. My recent work includes developing AI-powered solutions at Loamist, demonstrating my ability to adapt and excel in cutting-edge technologies.
   <br/>
-  I actively contribute to the open-source community, particularly in JavaScript and Node.js, with significant work on libraries for WebRTC, Fastify, JSDoc, and state management.
-  I also engaged with the developer community to discuss the latest trends and best practices in software development.
+
+  I actively contribute to the open-source community, particularly in JavaScript and Node.js, with significant work on libraries for WebRTC, Fastify, JSDoc, and state management. My extensive experience allows me to engage meaningfully with the developer community, sharing insights on the latest trends and best practices in software development.
 languages:
   - icon: 'circle-flags:es-variant'
     name: Spanish - native
