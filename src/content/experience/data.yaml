@@ -4,12 +4,41 @@ config:
   icon: 'fa6-solid:suitcase'
   visible: true
 jobs:
+  - role: Senior Software Engineer
+    company: Loamist
+    image: '@/assets/experience/loamist.png'
+    dates:
+      - 2024-09-01T00:00:00.000Z
+      - null
+    description: |2-
+      My responsibilities include:
+      - Maintaining and improving the existing Frontend application using React and TypeScript.
+      - Implemented a type-safe API on top of Bun.js using TypeScript and Fastify, handling complex business rules for biomass and forestry operations.
+      - Architected and developed a custom AI-powered RAG solution for document processing using Google's Gemini models, reducing manual data entry by 90% for forest service operations.
+      - Built a sophisticated OCR and data extraction pipeline that processes multiple document types with 95% accuracy.
+      - Created an asynchronous processing system using Inngest for background jobs, improving system reliability and scalability.
+      - Developed a flexible rule engine for document processing, enabling quick adaptation to new document types and business requirements.
+    tagsList:
+      title: Technologies
+      tags:
+        - type: javascript
+        - type: typescript
+        - type: bun
+        - type: fastify
+        - type: postgres
+        - type: aws
+        - type: googleGemini
+    links:
+      - type: linkedin
+        url: https://www.linkedin.com/company/loamist/
+      - type: website
+        url: https://loamist.com/
   - role: Senior JavaScript developer
     company: Alliants
     image: '@/assets/experience/alliants.jpeg'
     dates:
       - 2022-02-01T00:00:00.000Z
-      - 2024-07-01T00:00:00.000Z
+      - 2024-08-01T00:00:00.000Z
     description: |2-
       I was part of a team that built and deployed 10+ serverless APIs using JavaScript/TypeScript and Node.js, improving frontend team efficiency by 30%.
 

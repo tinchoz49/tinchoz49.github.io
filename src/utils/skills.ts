@@ -226,7 +226,7 @@ export const rust: Skill = {
 export const bun: Skill = {
   name: 'bun',
   icon: 'simple-icons:bun',
-  iconColor: '#000000',
+  iconColor: '#f7b500',
   url: 'https://bun.sh/',
 }
 
@@ -298,4 +298,11 @@ export const golang: Skill = {
   icon: 'simple-icons:go',
   iconColor: '#00ADD8',
   url: 'https://go.dev/',
+}
+
+export const googleGemini: Skill = {
+  name: 'Google Gemini',
+  icon: 'simple-icons:googlegemini',
+  iconColor: '#4285F4',
+  url: 'https://gemini.google.com/',
 }
