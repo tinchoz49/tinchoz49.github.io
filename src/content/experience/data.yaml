@@ -119,11 +119,14 @@ jobs:
       - 2017-03-01T00:00:00.000Z
       - 2018-03-01T00:00:00.000Z
     description: |2-
-      I worked on creating the "Vamos" application.<br/>
-      In this challenging project, I had to build:
-        - A microservice architecture to provide scalable APIs for partners and end users.
-        - A React web application partners.
-        - A React Native application for end users.
+      I led the development of Vamos, a platform designed to connect partners and end users through scalable, real-time applications.
+
+      In this project, I built:
+      - A microservice architecture using Moleculer.js to support real-time communication and ensure scalability.
+      - A React web application for partners to manage and monitor their operations.
+      - A React Native mobile app for end users to access services seamlessly.
+
+      The system was designed for performance, modularity, and ease of deployment across different environments.
     tagsList:
       title: Technologies
       tags:

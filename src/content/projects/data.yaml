@@ -28,7 +28,7 @@ projects:
           - Audio Streaming
     pdfDetails:
       - label: Web
-        value: 'https://discover.sher.app/'
+        value: 'https://sher.fm'
         url: '#'
     screenshots:
       - image: '@/assets/projects/sher0.png'
@@ -40,13 +40,13 @@ projects:
 
       Key features of Sher include:
         - Built on top of JavaScript/TypeScript and Node.js.
-        - **Decentralized Infrastructure:** By utilizing P2P networks, SHER.app ensures that audio content is distributed directly between users, reducing dependency on centralized servers and increasing the platform's robustness.
-        - **Live Audio Streaming:** SHER.app allows users to broadcast live audio sessions, making it suitable for various applications, including podcasts, live shows, and real-time discussions.
+        - **Decentralized Infrastructure:** By utilizing P2P networks, SHER.fm ensures that audio content is distributed directly between users, reducing dependency on centralized servers and increasing the platform's robustness.
+        - **Live Audio Streaming:** SHER.fm allows users to broadcast live audio sessions, making it suitable for various applications, including podcasts, live shows, and real-time discussions.
         - **Community Focus:** The platform is designed to foster a community-driven environment where users can connect, share, and interact with each other in real time.
-        - **Open Source:** As an open-source project, SHER.app invites contributions from developers worldwide, promoting transparency, innovation, and continuous improvement.
+        - **Open Source:** As an open-source project, SHER.fm invites contributions from developers worldwide, promoting transparency, innovation, and continuous improvement.
 
       <br/>
-      Overall, SHER.app embodies GEUT's commitment to building cutting-edge, decentralized products that empower users and enhance the digital experience.
+      Overall, SHER.fm embodies GEUT's commitment to building cutting-edge, decentralized products that empower users and enhance the digital experience.
     tagsList:
       title: Technologies
       tags:
@@ -60,9 +60,7 @@ projects:
         - type: webrtc
     links:
       - type: website
-        url: https://discover.sher.app/
-      - type: demo
-        url: https://sher.app/
+        url: https://sher.fm
   - name: Open Source
     image: '@/assets/projects/opensource.png'
     dates:
